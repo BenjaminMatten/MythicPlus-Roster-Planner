@@ -149,13 +149,13 @@ window.DungeonView = class DungeonView {
       tagLabel = '🛡️ Tank Buster';
     }
 
-    const spellId = ability.spellId || 384978;
+    const spellId = ability.spellId || 32000;
     const wowheadUrl = `https://www.wowhead.com/spell=${spellId}`;
 
     return `
       <div class="ability-card">
         <div class="ability-top-row">
-          <!-- Icon Image is the sole Wowhead link (renamelinks: false prevents text rewriting) -->
+          <!-- Icon Image is sole Wowhead mouseover preview link -->
           <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}" class="wowhead-icon-link" title="Hover for Wowhead spell preview">
             <img src="${ability.icon}" alt="${ability.name}" class="ability-icon" onerror="this.src='https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg'" />
           </a>

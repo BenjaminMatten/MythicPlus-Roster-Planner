@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Midnight Season 2 Mythic+ Dungeon Database
- * Includes accurate Wowhead spell IDs for mouseover spell previews.
+ * Verified Wowhead spell IDs matching exact WoW spell names.
  */
 
 window.SEASON_2_DUNGEONS = [
@@ -27,7 +27,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'fang-venom-bolt',
-            spellId: 384978,
+            spellId: 32000,
             name: 'Venomous Bolt',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_poisonbolt.jpg',
             castType: 'interruptible_cast',
@@ -41,7 +41,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'viper-spit-nova',
-            spellId: 32000,
+            spellId: 32300,
             name: 'Serpent Toxic Nova',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_acid_spray.jpg',
             castType: 'magic_aoe',
@@ -55,7 +55,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'fang-crush',
-            spellId: 372735,
+            spellId: 19705,
             name: 'Fang Crush',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_disembowel.jpg',
             castType: 'tank_buster',
@@ -117,7 +117,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-venom-wave',
-            spellId: 385553,
+            spellId: 15407,
             name: 'Void Venom Wave',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfiend.jpg',
             castType: 'magic_aoe',
@@ -131,7 +131,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'soul-siphon-fang',
-            spellId: 372735,
+            spellId: 19705,
             name: 'Soul Siphon Bite',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_shadowdance.jpg',
             castType: 'tank_buster',
@@ -435,7 +435,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'amani-rot-curse',
-            spellId: 14054,
+            spellId: 213644,
             name: 'Putrid Plague Cloud',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg',
             castType: 'disease_debuff',
@@ -553,7 +553,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-rift-explosion',
-            spellId: 385553,
+            spellId: 15407,
             name: 'Void Rift Collapse',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg',
             castType: 'magic_aoe',
