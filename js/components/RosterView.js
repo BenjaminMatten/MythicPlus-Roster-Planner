@@ -1,5 +1,7 @@
 /**
  * Roster & Mitigation Solver Sidebar Component
+ * Supports all 39 WoW Specs across Tanks, Healers, Melee DPS, and Ranged DPS.
+ * Clearly separates Single-Target Kicks from CC & Stun Disrupts.
  */
 
 window.RosterView = class RosterView {
@@ -44,7 +46,7 @@ window.RosterView = class RosterView {
         <div class="roster-header" style="margin-bottom: 1rem;">
           <div>
             <div class="roster-title">⚔️ Mythic+ Roster Builder</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.1rem;">Configure your 5-man party composition</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.1rem;">Configure your 5-man party composition (39 Specs Available)</div>
           </div>
         </div>
 
@@ -62,6 +64,9 @@ window.RosterView = class RosterView {
         return c.role === 'Melee DPS' || c.role === 'Ranged DPS';
       });
 
+      const kickLabel = currentSpec.interrupt.hasKick ? `🗡️ Kick: ${currentSpec.interrupt.name} (${currentSpec.interrupt.cd}s)` : '❌ No Lockout Kick';
+      const kickColor = currentSpec.interrupt.hasKick ? '#f87171' : '#94a3b8';
+
       html += `
         <div class="party-slot-card" style="border-left: 3px solid ${currentSpec.color};">
           <div class="slot-top">
@@ -69,16 +74,21 @@ window.RosterView = class RosterView {
             <select class="spec-select" data-slot-index="${index}">
               ${validSpecs.map(c => `
                 <option value="${c.id}" ${c.id === slot.selectedSpecId ? 'selected' : ''}>
-                  ${c.className} - ${c.specName} (${c.interrupt.cd}s kick)
+                  ${c.className} - ${c.specName} (${c.interrupt.hasKick ? c.interrupt.cd + 's kick' : 'No Kick'})
                 </option>
               `).join('')}
             </select>
           </div>
 
           <div class="player-utility-tags">
-            <span class="utility-pill" style="color: #f87171; border-color: rgba(239, 68, 68, 0.3);">
-              🗡 Kick: ${currentSpec.interrupt.name} (${currentSpec.interrupt.cd}s)
+            <span class="utility-pill" style="color: ${kickColor}; border-color: rgba(255,255,255,0.15);">
+              ${kickLabel}
             </span>
+            ${currentSpec.ccDisrupts && currentSpec.ccDisrupts.length > 0 ? `
+              <span class="utility-pill" style="color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">
+                🌀 CC: ${currentSpec.ccDisrupts[0]}
+              </span>
+            ` : ''}
             ${currentSpec.dispels.poison ? '<span class="utility-pill" style="color: #34d399;">🧪 Poison</span>' : ''}
             ${currentSpec.dispels.curse ? '<span class="utility-pill" style="color: #c084fc;">🔮 Curse</span>' : ''}
             ${currentSpec.dispels.disease ? '<span class="utility-pill" style="color: #fbbf24;">☣️ Disease</span>' : ''}

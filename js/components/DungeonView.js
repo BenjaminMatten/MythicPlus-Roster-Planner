@@ -1,5 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
+ * Clearly differentiates between Single-Target Lockout Kicks and CC/Stun Disrupts.
  */
 
 window.DungeonView = class DungeonView {
@@ -36,6 +37,7 @@ window.DungeonView = class DungeonView {
         // Filter chip check
         let matchesFilter = true;
         if (this.activeFilter === 'interrupts') matchesFilter = ability.castType === 'interruptible_cast';
+        else if (this.activeFilter === 'ccdisrupts') matchesFilter = ability.castType === 'channeled_stun' || ability.mitigationType === 'Stun / CC';
         else if (this.activeFilter === 'tank') matchesFilter = ability.castType === 'tank_buster';
         else if (this.activeFilter === 'bleeds') matchesFilter = ability.castType === 'bleed';
         else if (this.activeFilter === 'poison') matchesFilter = ability.castType === 'poison_debuff';
@@ -117,12 +119,30 @@ window.DungeonView = class DungeonView {
 
   renderAbilityCard(ability) {
     let tagClass = 'tag-magic';
-    if (ability.castType === 'interruptible_cast') tagClass = 'tag-kick';
-    else if (ability.castType === 'poison_debuff') tagClass = 'tag-poison';
-    else if (ability.castType === 'curse_debuff') tagClass = 'tag-curse';
-    else if (ability.castType === 'disease_debuff') tagClass = 'tag-disease';
-    else if (ability.castType === 'enrage') tagClass = 'tag-soothe';
-    else if (ability.castType === 'tank_buster') tagClass = 'tag-tank';
+    let tagLabel = ability.mitigationType;
+
+    if (ability.castType === 'interruptible_cast') {
+      tagClass = 'tag-kick';
+      tagLabel = '🗡️ Lockout Kick';
+    } else if (ability.castType === 'channeled_stun' || ability.mitigationType === 'Stun / CC') {
+      tagClass = 'tag-curse';
+      tagLabel = '🌀 CC / Stun Disrupt';
+    } else if (ability.castType === 'poison_debuff') {
+      tagClass = 'tag-poison';
+      tagLabel = '🧪 Poison Dispel';
+    } else if (ability.castType === 'curse_debuff') {
+      tagClass = 'tag-curse';
+      tagLabel = '🔮 Curse Dispel';
+    } else if (ability.castType === 'disease_debuff') {
+      tagClass = 'tag-disease';
+      tagLabel = '☣️ Disease Dispel';
+    } else if (ability.castType === 'enrage') {
+      tagClass = 'tag-soothe';
+      tagLabel = '🔥 Purge / Soothe';
+    } else if (ability.castType === 'tank_buster') {
+      tagClass = 'tag-tank';
+      tagLabel = '🛡️ Tank Buster';
+    }
 
     return `
       <div class="ability-card">
@@ -138,7 +158,7 @@ window.DungeonView = class DungeonView {
           </div>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.2rem;">
-          <span class="mitigation-tag ${tagClass}">🛡 ${ability.mitigationType}</span>
+          <span class="mitigation-tag ${tagClass}">${tagLabel}</span>
           <span style="font-size: 0.7rem; color: var(--text-dim);">Target: ${ability.target}</span>
         </div>
         <p class="ability-desc">${ability.description}</p>

@@ -1,5 +1,7 @@
 /**
  * Mitigation Matrix & Safety Solver Component
+ * Evaluates active Dungeon hazards against current Roster composition.
+ * Clearly differentiates between Lockout Kicks and CC/Stun Disrupts.
  */
 
 window.MitigationMatrix = class MitigationMatrix {
@@ -13,16 +15,19 @@ window.MitigationMatrix = class MitigationMatrix {
     // Collect all dungeon mitigation requirements
     const allAbilities = dungeon.mobs.flatMap(m => m.abilities);
     const requiresKick = allAbilities.some(a => a.castType === 'interruptible_cast');
+    const requiresCCDisrupt = allAbilities.some(a => a.castType === 'channeled_stun' || a.mitigationType === 'Stun / CC');
     const requiresPoison = allAbilities.some(a => a.castType === 'poison_debuff');
     const requiresCurse = allAbilities.some(a => a.castType === 'curse_debuff');
     const requiresDisease = allAbilities.some(a => a.castType === 'disease_debuff');
     const requiresSoothe = allAbilities.some(a => a.castType === 'enrage');
     const requiresMagicAoE = allAbilities.some(a => a.castType === 'magic_aoe');
-    const requiresFreedom = allAbilities.some(a => a.mitigationType === 'Freedom');
 
     // Party Capability Checks
-    const totalShortKicks = rosterSpecs.filter(s => s.interrupt.cd <= 15).length;
-    const totalKicks = rosterSpecs.filter(s => s.interrupt.cd > 0).length;
+    const specsWithKicks = rosterSpecs.filter(s => s.interrupt && s.interrupt.hasKick);
+    const totalShortKicks = specsWithKicks.filter(s => s.interrupt.cd <= 15).length;
+    const totalKicks = specsWithKicks.length;
+
+    const specsWithCC = rosterSpecs.filter(s => s.ccDisrupts && s.ccDisrupts.length > 0).length;
 
     const hasPoison = rosterSpecs.some(s => s.dispels.poison || s.dispels.cauterizingFlame);
     const hasCurse = rosterSpecs.some(s => s.dispels.curse || s.dispels.cauterizingFlame);
@@ -36,50 +41,60 @@ window.MitigationMatrix = class MitigationMatrix {
     let scorePoints = 100;
     const checks = [];
 
-    // 1. Kick check
+    // 1. Single-Target Lockout Kicks check
     if (requiresKick) {
       if (totalShortKicks >= 3) {
-        checks.push({ label: 'Interrupt Rotation', status: 'GREEN', text: `${totalShortKicks} Short Kicks (Strong Rotation)` });
-      } else if (totalKicks >= 3) {
-        checks.push({ label: 'Interrupt Rotation', status: 'AMBER', text: `${totalKicks} Total Kicks (Longer Cooldowns)` });
+        checks.push({ label: 'Single-Target Kicks', status: 'GREEN', text: `${totalShortKicks} Short Kicks (<=15s)` });
+      } else if (totalKicks >= 2) {
+        checks.push({ label: 'Single-Target Kicks', status: 'AMBER', text: `${totalKicks} Kicks (${5 - totalKicks} specs have no kick)` });
         scorePoints -= 10;
       } else {
-        checks.push({ label: 'Interrupt Rotation', status: 'RED', text: `Only ${totalKicks} Kicks! Vulnerable to spell spam!` });
+        checks.push({ label: 'Single-Target Kicks', status: 'RED', text: `Only ${totalKicks} Kick available! High spell risk!` });
         scorePoints -= 25;
       }
     }
 
-    // 2. Poison Dispel
+    // 2. Crowd Control & Stun Disrupts check
+    if (requiresCCDisrupt) {
+      if (specsWithCC >= 3) {
+        checks.push({ label: 'CC & Stun Disrupts', status: 'GREEN', text: `${specsWithCC} Players with Stuns/Knockbacks` });
+      } else {
+        checks.push({ label: 'CC & Stun Disrupts', status: 'AMBER', text: `${specsWithCC} CC specs (Channel casts risk)` });
+        scorePoints -= 10;
+      }
+    }
+
+    // 3. Poison Dispel
     if (requiresPoison) {
       if (hasPoison) {
         checks.push({ label: 'Poison Dispel', status: 'GREEN', text: 'Covered by Roster' });
       } else {
-        checks.push({ label: 'Poison Dispel', status: 'RED', text: 'MISSING! Deadly poison debuffs will trigger!' });
+        checks.push({ label: 'Poison Dispel', status: 'RED', text: 'MISSING! Poison debuffs active in dungeon!' });
         scorePoints -= 20;
       }
     }
 
-    // 3. Curse Dispel
+    // 4. Curse Dispel
     if (requiresCurse) {
       if (hasCurse) {
         checks.push({ label: 'Curse Dispel', status: 'GREEN', text: 'Covered by Roster' });
       } else {
-        checks.push({ label: 'Curse Dispel', status: 'RED', text: 'MISSING! Mandatory curses in dungeon!' });
+        checks.push({ label: 'Curse Dispel', status: 'RED', text: 'MISSING! Curses present in dungeon!' });
         scorePoints -= 20;
       }
     }
 
-    // 4. Disease Dispel
+    // 5. Disease Dispel
     if (requiresDisease) {
       if (hasDisease) {
         checks.push({ label: 'Disease Dispel', status: 'GREEN', text: 'Covered by Roster' });
       } else {
-        checks.push({ label: 'Disease Dispel', status: 'RED', text: 'MISSING! Contagious diseases present!' });
+        checks.push({ label: 'Disease Dispel', status: 'RED', text: 'MISSING! Diseases present in dungeon!' });
         scorePoints -= 20;
       }
     }
 
-    // 5. Enrage Soothe
+    // 6. Enrage Soothe
     if (requiresSoothe) {
       if (hasSoothe) {
         checks.push({ label: 'Enrage Purge / Soothe', status: 'GREEN', text: 'Covered by Roster' });
@@ -89,7 +104,7 @@ window.MitigationMatrix = class MitigationMatrix {
       }
     }
 
-    // 6. Group Defensive CD
+    // 7. Group Defensive CD
     if (requiresMagicAoE) {
       if (hasGroupDR) {
         checks.push({ label: 'Party Defensive CDs', status: 'GREEN', text: 'Group DRs available for heavy AoE' });
@@ -99,7 +114,7 @@ window.MitigationMatrix = class MitigationMatrix {
       }
     }
 
-    // 7. Lust & BRes
+    // 8. Lust & BRes
     if (!hasBloodlust) {
       checks.push({ label: 'Bloodlust / Heroism', status: 'AMBER', text: 'No innate Lust (Need Drums)' });
       scorePoints -= 5;
