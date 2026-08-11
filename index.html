@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WoW: Midnight Season 2 Mythic+ Dungeon & Roster Mitigation Companion</title>
+  <meta name="description" content="Interactive World of Warcraft Midnight Season 2 Mythic+ dungeon ability database, mob graphics, and roster mitigation solver." />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- Wowhead Tooltips Configuration -->
+  <script>const wowhead_tooltips = { colorlinks: true, iconicelinks: true, renamelinks: true };</script>
+  <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+</head>
+<body>
+  <!-- Atmospheric Parallax Wallpaper Overlay -->
+  <div id="app-background-overlay"></div>
+
+  <div id="app-container">
+    <!-- Header Navigation -->
+    <header class="app-header glass-card">
+      <div class="header-title-box">
+        <div class="mplus-keystone-icon">🗝️</div>
+        <div>
+          <div class="header-title">
+            WoW: Midnight M+ Companion
+            <span class="season-tag">Season 2</span>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">
+            August 2026 Mythic+ Rotation • Ability Explorer & Party Mitigation Solver
+          </div>
+        </div>
+      </div>
+
+      <div class="header-nav-controls">
+        <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(10,14,23,0.7); padding: 0.3rem 0.7rem; border-radius: 6px; border: 1px solid var(--border-subtle);">
+          <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">KEY LEVEL:</span>
+          <select id="key-level-select" style="background: transparent; border: none; color: var(--mplus-purple); font-weight: 800; font-size: 0.95rem; outline: none; cursor: pointer;">
+            <option value="+2">+2 (Lindormi's Guidance)</option>
+            <option value="+5">+5 (Xal'atath's Bargain)</option>
+            <option value="+8" selected>+8 (Challenger's Peril)</option>
+            <option value="+10">+10 (Tyrannical / Fortified)</option>
+            <option value="+12">+12 (Legendary Key)</option>
+            <option value="+15">+15+ (Title Push)</option>
+          </select>
+        </div>
+
+        <div class="view-mode-selector">
+          <button id="btn-view-split" class="view-mode-btn active">📊 Combined Split</button>
+          <button id="btn-view-dungeon" class="view-mode-btn">🏰 Dungeon Explorer</button>
+          <button id="btn-view-roster" class="view-mode-btn">🛡️ Roster Solver</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dungeon Navigation Tabs -->
+    <nav id="dungeon-tabs" class="dungeon-nav-strip"></nav>
+
+    <!-- Main View Layout -->
+    <main id="main-layout" class="main-view-layout">
+      <!-- Left Column: Dungeon Explorer -->
+      <section id="explorer-section">
+        <!-- Search and Filter Bar -->
+        <div class="explorer-controls glass-card" style="padding: 0.75rem 1rem;">
+          <div class="search-bar-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" class="search-input" placeholder="Search mob, ability, or mechanic (e.g. Kick, Poison, Garrote, Frontal)..." />
+          </div>
+
+          <div class="filter-chips-wrapper">
+            <button class="filter-chip active" data-filter="all">All Abilities</button>
+            <button class="filter-chip" data-filter="interrupts">🗡️ Interrupts</button>
+            <button class="filter-chip" data-filter="tank">🛡️ Tank Busters</button>
+            <button class="filter-chip" data-filter="poison">🧪 Poison</button>
+            <button class="filter-chip" data-filter="curse">🔮 Curse</button>
+            <button class="filter-chip" data-filter="disease">☣️ Disease</button>
+            <button class="filter-chip" data-filter="magic">⚡ Magic AoE</button>
+            <button class="filter-chip" data-filter="enrage">🔥 Enrage</button>
+          </div>
+        </div>
+
+        <!-- Dungeon Content View -->
+        <div id="dungeon-view-container"></div>
+      </section>
+
+      <!-- Right Column: Roster & Mitigation Solver -->
+      <aside id="roster-section" class="roster-sidebar">
+        <!-- Roster Slot Inputs -->
+        <div id="roster-container"></div>
+
+        <!-- Automated Mitigation Solver Output -->
+        <div id="solver-container"></div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Application JavaScript Files -->
+  <script src="js/data/dungeons.js"></script>
+  <script src="js/data/classes.js"></script>
+  <script src="js/components/DungeonView.js"></script>
+  <script src="js/components/RosterView.js"></script>
+  <script src="js/components/MitigationMatrix.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
