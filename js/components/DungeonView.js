@@ -1,6 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Wraps spell icon images with Wowhead links while keeping ability title text clean.
+ * Supports filtering by Bosses Only, Trash Only, or specific hazard mechanics.
  */
 
 window.DungeonView = class DungeonView {
@@ -31,8 +31,12 @@ window.DungeonView = class DungeonView {
 
     const { name, expansion, zone, description, keyMechanics, mobs, accentColor } = this.currentDungeon;
 
-    // Filter Mobs & Abilities
-    const filteredMobs = mobs.map(mob => {
+    // Filter Mobs (Bosses Only, Trash Only, or All)
+    const filteredMobs = mobs.filter(mob => {
+      if (this.activeFilter === 'bosses') return mob.type === 'Boss';
+      if (this.activeFilter === 'trash') return mob.type === 'Trash';
+      return true;
+    }).map(mob => {
       const matchingAbilities = mob.abilities.filter(ability => {
         // Filter chip check
         let matchesFilter = true;
@@ -85,7 +89,7 @@ window.DungeonView = class DungeonView {
       html += `
         <div class="glass-card" style="padding: 3rem; text-align: center; color: var(--text-muted);">
           <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
-          <h3 style="color: #ffffff;">No abilities match your filter criteria</h3>
+          <h3 style="color: #ffffff;">No mobs or abilities match your filter criteria</h3>
           <p style="font-size: 0.85rem; margin-top: 0.3rem;">Try switching filter tabs or clearing your search term.</p>
         </div>
       `;
