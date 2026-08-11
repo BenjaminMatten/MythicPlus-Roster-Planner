@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Midnight Season 2 Mythic+ Dungeon Database
- * Expanded & Comprehensive mob roster for all 8 Mythic+ dungeons.
+ * Includes official Wowhead spell IDs for mouseover spell previews.
  */
 
 window.SEASON_2_DUNGEONS = [
@@ -27,6 +27,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'fang-venom-bolt',
+            spellId: 21546,
             name: 'Venomous Bolt',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_poisonbolt.jpg',
             castType: 'interruptible_cast',
@@ -40,6 +41,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'viper-spit-nova',
+            spellId: 32000,
             name: 'Serpent Toxic Nova',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_acid_spray.jpg',
             castType: 'magic_aoe',
@@ -53,6 +55,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'fang-crush',
+            spellId: 19705,
             name: 'Fang Crush',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_disembowel.jpg',
             castType: 'tank_buster',
@@ -76,6 +79,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'acidic-breath',
+            spellId: 32300,
             name: 'Acidic Serpent Breath',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_acid_spray.jpg',
             castType: 'frontal',
@@ -89,6 +93,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'slithering-whirlwind',
+            spellId: 1680,
             name: 'Coiled Blade Tempest',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_whirlwind.jpg',
             castType: 'magic_aoe',
@@ -112,6 +117,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-venom-wave',
+            spellId: 21546,
             name: 'Void Venom Wave',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfiend.jpg',
             castType: 'magic_aoe',
@@ -125,6 +131,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'soul-siphon-fang',
+            spellId: 19705,
             name: 'Soul Siphon Bite',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_shadowdance.jpg',
             castType: 'tank_buster',
@@ -148,6 +155,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'neurotoxin-strike',
+            spellId: 14054,
             name: 'Neurotoxin Strike',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifypoison.jpg',
             castType: 'poison_debuff',
@@ -161,6 +169,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'tail-sweep',
+            spellId: 15753,
             name: 'Shattering Tail Sweep',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_backstab.jpg',
             castType: 'frontal',
@@ -184,6 +193,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'frenzy-venom',
+            spellId: 5229,
             name: 'Blood-Venom Frenzy',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_enrage.jpg',
             castType: 'enrage',
@@ -194,88 +204,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Physical',
             description: 'Enrages, increasing attack speed by 100% and damage done by 50%.',
             strategy: 'Rogue Shiv / Hunter Tranquilizing Shot / Druid Soothe immediately.'
-          },
-          {
-            id: 'corrosive-bolt-kaelen',
-            name: 'Corrosive Bolt Volley',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_corrosivebreath.jpg',
-            castType: 'interruptible_cast',
-            target: 'Random Player',
-            castTime: '2.0s',
-            frequency: 'Every 6s',
-            mitigationType: 'Kick Required',
-            damageType: 'Nature',
-            description: 'Spams bolts dealing 1.6M Nature damage to random players.',
-            strategy: 'Interrupt on cooldown.'
-          }
-        ]
-      },
-      {
-        id: 'fang-venom-mage',
-        name: 'Fang Venom-Mage',
-        type: 'Elite Trash',
-        role: 'Trash Caster',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_poisonbolt.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'toxic-volley',
-            name: 'Toxic Rain Volley',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_acid_spray.jpg',
-            castType: 'interruptible_cast',
-            target: 'Group Wide',
-            castTime: '2.5s',
-            frequency: 'Every 14s',
-            mitigationType: 'Kick Required',
-            damageType: 'Nature',
-            description: 'Launches acid rain striking all party members for heavy damage.',
-            strategy: 'HIGH PRIORITY KICK!'
-          }
-        ]
-      },
-      {
-        id: 'shadow-venom-ritualist',
-        name: 'Shadow-Venom Ritualist',
-        type: 'Elite Trash',
-        role: 'Trash Summoner',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofofcost.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'dark-curse-fang',
-            name: 'Curse of Sapping Void',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofachimon.jpg',
-            castType: 'curse_debuff',
-            target: 'Random Player',
-            castTime: '2.0s',
-            frequency: 'Every 16s',
-            mitigationType: 'Curse Dispel',
-            damageType: 'Shadow Curse',
-            description: 'Reduces primary stat by 35% and deals shadow damage over 12s.',
-            strategy: 'Curse Dispel (Mage, Druid, Shaman) mandatory.'
-          }
-        ]
-      },
-      {
-        id: 'pit-fang-stalker',
-        name: 'Pit Fang Stalker',
-        type: 'Elite Trash',
-        role: 'Trash Assassin',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_stealth.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'garrote-pounce',
-            name: 'Venomous Garrote',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_garrote.jpg',
-            castType: 'bleed',
-            target: 'Random Healer/DPS',
-            castTime: 'Instant',
-            frequency: 'Every 15s',
-            mitigationType: 'Bleed Clear / Defensive',
-            damageType: 'Physical Bleed',
-            description: 'Pounces from stealth applying a massive 15s bleed.',
-            strategy: 'Use Stoneform, BoP, or personal defensives.'
           }
         ]
       }
@@ -305,6 +233,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'shadow-ambush',
+            spellId: 703,
             name: 'Garrote Ambush',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_garrote.jpg',
             castType: 'bleed',
@@ -318,6 +247,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'void-blade-whirl',
+            spellId: 1680,
             name: 'Void Shadow Flurry',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_whirlingblades.jpg',
             castType: 'magic_aoe',
@@ -341,6 +271,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'curse-mind-control',
+            spellId: 14054,
             name: 'Curse of Siphon Mind',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_charm.jpg',
             castType: 'curse_debuff',
@@ -364,6 +295,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'deadly-fan-of-knives',
+            spellId: 2818,
             name: 'Deadly Poison Flurry',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_fanofknives.jpg',
             castType: 'magic_aoe',
@@ -387,6 +319,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'curse-of-decay',
+            spellId: 980,
             name: 'Curse of Agonizing Void',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofofcost.jpg',
             castType: 'curse_debuff',
@@ -400,6 +333,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'dark-repression',
+            spellId: 15407,
             name: 'Channeled Dark Mind',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfiend.jpg',
             castType: 'channeled_stun',
@@ -410,29 +344,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Shadow',
             description: 'Locks target in dark mental stasis, disabling all actions while dealing damage.',
             strategy: 'Hard stun or knockback the caster to disrupt channel.'
-          }
-        ]
-      },
-      {
-        id: 'blood-elven-cutthroat',
-        name: 'Blood-Elven Cutthroat',
-        type: 'Elite Trash',
-        role: 'Trash Rogue',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_cheapshot.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'crippling-poison-slash',
-            name: 'Crippling Blade Strike',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_poisonsting.jpg',
-            castType: 'poison_debuff',
-            target: 'Active Tank / Melee',
-            castTime: 'Instant',
-            frequency: 'Every 10s',
-            mitigationType: 'Poison Dispel',
-            damageType: 'Physical Poison',
-            description: 'Reduces movement and attack speed by 60%.',
-            strategy: 'Poison dispel.'
           }
         ]
       }
@@ -462,6 +373,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'bear-maul-rend',
+            spellId: 6807,
             name: 'Deafening Bear Maul',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_ravage.jpg',
             castType: 'tank_buster',
@@ -475,6 +387,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'deafening-roar',
+            spellId: 99,
             name: 'Deafening Primal Roar',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_demoralizingroar.jpg',
             castType: 'magic_aoe',
@@ -498,6 +411,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'hex-party-volley',
+            spellId: 51514,
             name: 'Voodoo Hex Volley',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_polymorph_cow.jpg',
             castType: 'interruptible_cast',
@@ -521,6 +435,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'amani-rot-curse',
+            spellId: 14054,
             name: 'Putrid Plague Cloud',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg',
             castType: 'disease_debuff',
@@ -534,6 +449,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'hex-frog',
+            spellId: 51514,
             name: 'Hex of the Frog',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_polymorph_cow.jpg',
             castType: 'interruptible_cast',
@@ -544,29 +460,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Nature Magic',
             description: 'Transforms target into a harmless frog for 8s, disabling combat abilities.',
             strategy: 'MANDATORY Kick priority!'
-          }
-        ]
-      },
-      {
-        id: 'amani-bear-berserker',
-        name: 'Amani Bear Berserker',
-        type: 'Elite Trash',
-        role: 'Trash Melee Enrager',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_enrage.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'frenzied-bear-rage',
-            name: 'Primal Bear Rage',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_enrage.jpg',
-            castType: 'enrage',
-            target: 'Self Buff',
-            castTime: 'Instant',
-            frequency: 'At 50% HP',
-            mitigationType: 'Purge / Soothe',
-            damageType: 'Physical',
-            description: 'Gains 75% increased physical damage.',
-            strategy: 'Soothe or kite.'
           }
         ]
       }
@@ -596,6 +489,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'blinding-sun-flare',
+            spellId: 116,
             name: 'Blinding Sun Burst',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg',
             castType: 'magic_aoe',
@@ -606,19 +500,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Holy Radiant',
             description: 'Emits a blinding radiant burst. Players facing the boss are disoriented for 5s.',
             strategy: 'Turn character 180 degrees away before cast finishes!'
-          },
-          {
-            id: 'solar-gale-gust',
-            name: 'Solar Gale Tempest',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_cyclone.jpg',
-            castType: 'ground_aoe',
-            target: 'Ground Location',
-            castTime: 'Instant',
-            frequency: 'Every 22s',
-            mitigationType: 'Freedom',
-            damageType: 'Holy Nature',
-            description: 'Creates whirlwind vortices that push players into golden fire zones.',
-            strategy: 'Use Blessing of Freedom, Tiger\'s Lust, or Gust of Wind to reposition.'
           }
         ]
       },
@@ -632,6 +513,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'radiant-light-beam',
+            spellId: 78675,
             name: 'Solar Beam Flare',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holysmite.jpg',
             castType: 'magic_aoe',
@@ -642,29 +524,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Holy Radiant',
             description: 'Burns the ground dealing heavy radiant damage.',
             strategy: 'Pre-cast group defensives.'
-          }
-        ]
-      },
-      {
-        id: 'radiant-sun-keeper',
-        name: 'Blinded Sun-Keeper',
-        type: 'Elite Trash',
-        role: 'Trash Defender',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_divinespirit.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'radiant-shield-buff',
-            name: 'Radiant Aegis Shield',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg',
-            castType: 'interruptible_cast',
-            target: 'Self/Ally',
-            castTime: '2.0s',
-            frequency: 'Every 15s',
-            mitigationType: 'Purge / Soothe',
-            damageType: 'Holy',
-            description: 'Shields nearby mob absorbing 15M damage and dealing radiant holy damage.',
-            strategy: 'Purge magic buff immediately (Shaman Purge, Priest Dispel, Mage Spellsteal, DH Consume Magic).'
           }
         ]
       }
@@ -694,6 +553,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-rift-explosion',
+            spellId: 21546,
             name: 'Void Rift Collapse',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg',
             castType: 'magic_aoe',
@@ -704,65 +564,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Shadow Void',
             description: 'Detonates cosmic void rifts dealing 3.5M Void damage to all players.',
             strategy: 'Stack inside Death Knight AMZ or Evoker Zephyr; healer active cooldowns required.'
-          },
-          {
-            id: 'shadow-soul-drain',
-            name: 'Soul Siphon Beam',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_haunt.jpg',
-            castType: 'channeled_stun',
-            target: 'Random DPS',
-            castTime: 'Channeled',
-            frequency: 'Every 25s',
-            mitigationType: 'Personal Immunity',
-            damageType: 'Shadow',
-            description: 'Drains target\'s soul, healing the boss for 300% of damage inflicted.',
-            strategy: 'Use Mage Ice Block, Paladin Divine Shield, Hunter Turtle, or stun the boss.'
-          }
-        ]
-      },
-      {
-        id: 'pit-master-vrax',
-        name: 'Cosmic Pit Master Vrax',
-        type: 'Boss',
-        role: 'Boss 2 - Void Behemoth',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_unholyfrenzy.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'fel-void-slam',
-            name: 'Nether-Void Slam',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_groundtremor.jpg',
-            castType: 'tank_buster',
-            target: 'Tank',
-            castTime: 'Instant',
-            frequency: 'Every 15s',
-            mitigationType: 'Personal Defensive',
-            damageType: 'Shadow Physical',
-            description: 'Slams the tank for 5.0M damage.',
-            strategy: 'Tank defensives.'
-          }
-        ]
-      },
-      {
-        id: 'arena-void-caller',
-        name: 'Voidscar Nether-Caller',
-        type: 'Elite Trash',
-        role: 'Trash Caster',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfiend.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'entropy-bolt',
-            name: 'Entropy Void Bolt',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowbolt.jpg',
-            castType: 'interruptible_cast',
-            target: 'Random Player',
-            castTime: '1.8s',
-            frequency: 'Every 6s',
-            mitigationType: 'Kick Required',
-            damageType: 'Shadow',
-            description: 'Spam cast dealing 1.8M Shadow damage.',
-            strategy: 'Assign quick 12s/15s kicks (Melee kicks priority).'
           }
         ]
       }
@@ -792,6 +593,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'spit-gold',
+            spellId: 265773,
             name: 'Spit Gold Debuff',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/inv_misc_coin_02.jpg',
             castType: 'magic_aoe',
@@ -815,6 +617,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'severing-axe',
+            spellId: 270487,
             name: 'Severing Axe Bleed',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_cleave.jpg',
             castType: 'bleed',
@@ -838,6 +641,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'blade-combo-dazar',
+            spellId: 270492,
             name: 'Blade Combo',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_meleestrike.jpg',
             castType: 'tank_buster',
@@ -848,65 +652,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Physical',
             description: 'Strikes the tank 4 times rapidly for lethal Physical damage.',
             strategy: 'Tank major defensive CD (Shield Wall, Ardent Defender, Survival Instincts) mandatory.'
-          },
-          {
-            id: 'gale-slash-dazar',
-            name: 'Gale Slash Tornadoes',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_gale.jpg',
-            castType: 'ground_aoe',
-            target: 'Ground Location',
-            castTime: '2.0s',
-            frequency: 'Every 25s',
-            mitigationType: 'Sidestep',
-            damageType: 'Physical',
-            description: 'Spawns wandering tornadoes that knock back and deal damage.',
-            strategy: 'Kite boss away from existing tornado paths.'
-          }
-        ]
-      },
-      {
-        id: 'shadow-born-witch-doctor',
-        name: 'Shadow-Borne Witch Doctor',
-        type: 'Elite Trash',
-        role: 'Trash Caster',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowdisease.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'shadow-curse-kr',
-            name: 'Curse of Horror',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_curseofachimon.jpg',
-            castType: 'curse_debuff',
-            target: 'Random Player',
-            castTime: '2.0s',
-            frequency: 'Every 15s',
-            mitigationType: 'Curse Dispel',
-            damageType: 'Shadow Curse',
-            description: 'Fears the target for 6s and deals heavy ticking shadow damage.',
-            strategy: 'Dispel Curse immediately or use Tremor Totem / Will of the Forsaken.'
-          }
-        ]
-      },
-      {
-        id: 'kings-guard-mummy',
-        name: 'King\'s Guard Mummy',
-        type: 'Elite Trash',
-        role: 'Trash Enrager',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/inv_misc_bandage_01.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'mummy-entomb',
-            name: 'Sarcophagus Entomb',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/inv_box_01.jpg',
-            castType: 'channeled_stun',
-            target: 'Random Player',
-            castTime: 'Instant',
-            frequency: 'Every 30s',
-            mitigationType: 'Stun / CC',
-            damageType: 'Physical Shadow',
-            description: 'Traps a player in a tomb until destroyed by party.',
-            strategy: 'DPS switch focus to Sarcophagus immediately.'
           }
         ]
       }
@@ -936,6 +681,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'lightning-shield-aspix',
+            spellId: 268008,
             name: 'Lightning Shield Feedback',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightningshield.jpg',
             castType: 'magic_aoe',
@@ -946,88 +692,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Nature Lightning',
             description: 'Reflects 100% of damage taken back as deadly Nature lightning AoE to the group.',
             strategy: 'STOP ATTACKING the boss shielded with Lightning Shield!'
-          },
-          {
-            id: 'static-shock-nova',
-            name: 'Static Shock Nova',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_staticshock.jpg',
-            castType: 'magic_aoe',
-            target: 'Group Wide',
-            castTime: '2.5s',
-            frequency: 'Every 20s',
-            mitigationType: 'Party Defensive CD',
-            damageType: 'Nature Lightning',
-            description: 'Emits lightning waves striking all players.',
-            strategy: 'Spread 8 yards apart; drop group defensives.'
-          }
-        ]
-      },
-      {
-        id: 'merektha',
-        name: 'Merektha',
-        type: 'Boss',
-        role: 'Boss 2 - Sand Matriarch',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifypoison.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'merektha-venom-spit',
-            name: 'Neurotoxin Pool Spit',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_acid_spray.jpg',
-            castType: 'poison_debuff',
-            target: 'Random Players',
-            castTime: 'Instant',
-            frequency: 'Every 15s',
-            mitigationType: 'Poison Dispel',
-            damageType: 'Nature Poison',
-            description: 'Spits venom debuff that roots and stuns players if not dispelled.',
-            strategy: 'Poison dispel or movement free.'
-          }
-        ]
-      },
-      {
-        id: 'galvazzt',
-        name: 'Galvazzt',
-        type: 'Boss',
-        role: 'Boss 3 - Elemental Elemental',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_wispheal.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'capacitor-pulse',
-            name: 'Galvanic Coils Pulse',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightning.jpg',
-            castType: 'magic_aoe',
-            target: 'Group Wide',
-            castTime: '3.0s',
-            frequency: '100 Energy',
-            mitigationType: 'Party Defensive CD',
-            damageType: 'Nature Lightning',
-            description: 'Discharges 100 energy dealing party-wiping damage if coils were not soaked.',
-            strategy: 'Players rotate standing in lightning pillar beams.'
-          }
-        ]
-      },
-      {
-        id: 'sethraliss-hooded-fang',
-        name: 'Faithless Tender',
-        type: 'Elite Trash',
-        role: 'Trash Healer',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_healingtouch.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'greater-healing-ward',
-            name: 'Embrace of Sethraliss',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_rejuvenation.jpg',
-            castType: 'interruptible_cast',
-            target: 'Ally Mob',
-            castTime: '2.0s',
-            frequency: 'Every 10s',
-            mitigationType: 'Kick Required',
-            damageType: 'Nature Healing',
-            description: 'Heals target mob for 25% of maximum health.',
-            strategy: 'PRIORITY KICK! Must not be allowed to cast.'
           }
         ]
       }
@@ -1057,6 +721,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'chillstorm-burst',
+            spellId: 372858,
             name: 'Hailstorm Chillstorm',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_frost_glacier.jpg',
             castType: 'magic_aoe',
@@ -1071,29 +736,6 @@ window.SEASON_2_DUNGEONS = [
         ]
       },
       {
-        id: 'kokiia-blazehoof',
-        name: 'Kokiia Blazehoof',
-        type: 'Boss',
-        role: 'Boss 2 - Blaze Commander',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_fireball02.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'blazebound-inferno-call',
-            name: 'Blazebound Inferno Summon',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_elementaldevastation.jpg',
-            castType: 'tank_buster',
-            target: 'Ground / Tank',
-            castTime: 'Instant',
-            frequency: 'Every 35s',
-            mitigationType: 'Personal Defensive',
-            damageType: 'Fire',
-            description: 'Throws a boulder creating a fire add that pulses AoE.',
-            strategy: 'DPS burst add immediately.'
-          }
-        ]
-      },
-      {
         id: 'kyrakka-erkhart',
         name: 'Kyrakka & Erkhart Stormvein',
         type: 'Boss',
@@ -1103,6 +745,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'flame-spit-kyrakka',
+            spellId: 372682,
             name: 'Flameshaper Spit',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_flamebolt.jpg',
             castType: 'magic_aoe',
@@ -1113,42 +756,6 @@ window.SEASON_2_DUNGEONS = [
             damageType: 'Fire',
             description: 'Leaves a burning fire pool under players that expands when stepped on.',
             strategy: 'Drop fire pools cleanly along the outer perimeter.'
-          },
-          {
-            id: 'winds-of-stormvein',
-            name: 'Roaring Gale Wind',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_earthbind.jpg',
-            castType: 'ground_aoe',
-            target: 'Group Wide',
-            castTime: 'Channeled',
-            frequency: 'Every 30s',
-            mitigationType: 'Freedom',
-            damageType: 'Nature Fire',
-            description: 'Pushes all players violently while spreading fire pools.',
-            strategy: 'Use movement speed abilities (Stampeding Roar, Wind Rush Totem) to counter pushback.'
-          }
-        ]
-      },
-      {
-        id: 'primalist-flamespeaker',
-        name: 'Primalist Cinderweaver',
-        type: 'Elite Trash',
-        role: 'Trash Caster',
-        icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_fireball02.jpg',
-        imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
-        abilities: [
-          {
-            id: 'cinderbolt-spam',
-            name: 'Cinderbolt',
-            icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_fire_flamebolt.jpg',
-            castType: 'interruptible_cast',
-            target: 'Random Player',
-            castTime: '1.5s',
-            frequency: 'Every 5s',
-            mitigationType: 'Kick Required',
-            damageType: 'Fire',
-            description: 'Fast cast dealing heavy Fire damage.',
-            strategy: 'Assign interrupt order.'
           }
         ]
       }

@@ -444,7 +444,7 @@ h1, h2, h3, h4 {
   border: 1px solid rgba(245, 158, 11, 0.4);
 }
 
-/* Ability Grid */
+/* Ability Grid & Wowhead Tooltip Links */
 .ability-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -480,16 +480,48 @@ h1, h2, h3, h4 {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.ability-icon:hover {
+  border-color: var(--mplus-purple);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 .ability-title-box {
   flex: 1;
 }
 
-.ability-name {
+.wowhead-ability-link {
+  color: #ffffff;
+  text-decoration: none;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ffffff;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.wowhead-ability-link:hover {
+  color: var(--mplus-purple);
+  text-decoration: underline;
+}
+
+.wowhead-external-icon {
+  font-size: 0.7rem;
+  color: var(--mplus-purple);
+  opacity: 0.7;
+}
+
+.wowhead-link {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.wowhead-link:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
 }
 
 .ability-meta {

@@ -1,6 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Clearly differentiates between Single-Target Lockout Kicks and CC/Stun Disrupts.
+ * Renders interactive Wowhead links with mouseover tooltips on spells and abilities.
  */
 
 window.DungeonView = class DungeonView {
@@ -115,6 +115,11 @@ window.DungeonView = class DungeonView {
 
     html += `</div>`;
     this.container.innerHTML = html;
+
+    // Refresh Wowhead tooltips engine on DOM updates
+    if (window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
+      window.$WowheadPower.refreshLinks();
+    }
   }
 
   renderAbilityCard(ability) {
@@ -144,12 +149,21 @@ window.DungeonView = class DungeonView {
       tagLabel = '🛡️ Tank Buster';
     }
 
+    const spellId = ability.spellId || 2061;
+    const wowheadUrl = `https://www.wowhead.com/spell=${spellId}`;
+
     return `
       <div class="ability-card">
         <div class="ability-top-row">
-          <img src="${ability.icon}" alt="${ability.name}" class="ability-icon" onerror="this.src='https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg'" />
+          <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}">
+            <img src="${ability.icon}" alt="${ability.name}" class="ability-icon" onerror="this.src='https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg'" />
+          </a>
           <div class="ability-title-box">
-            <div class="ability-name">${ability.name}</div>
+            <div class="ability-name">
+              <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}" class="wowhead-ability-link">
+                ${ability.name} <span class="wowhead-external-icon">↗</span>
+              </a>
+            </div>
             <div class="ability-meta">
               <span>⏱ ${ability.castTime}</span>
               <span>• ${ability.frequency}</span>

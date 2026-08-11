@@ -1,7 +1,6 @@
 /**
  * Roster & Mitigation Solver Sidebar Component
- * Supports all 39 WoW Specs across Tanks, Healers, Melee DPS, and Ranged DPS.
- * Clearly separates Single-Target Kicks from CC & Stun Disrupts.
+ * Renders player utility pills as interactive Wowhead links with mouseover tooltips.
  */
 
 window.RosterView = class RosterView {
@@ -46,7 +45,7 @@ window.RosterView = class RosterView {
         <div class="roster-header" style="margin-bottom: 1rem;">
           <div>
             <div class="roster-title">⚔️ Mythic+ Roster Builder</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.1rem;">Configure your 5-man party composition (39 Specs Available)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.1rem;">Configure your 5-man party composition</div>
           </div>
         </div>
 
@@ -89,13 +88,13 @@ window.RosterView = class RosterView {
                 🌀 CC: ${currentSpec.ccDisrupts[0]}
               </span>
             ` : ''}
-            ${currentSpec.dispels.poison ? '<span class="utility-pill" style="color: #34d399;">🧪 Poison</span>' : ''}
-            ${currentSpec.dispels.curse ? '<span class="utility-pill" style="color: #c084fc;">🔮 Curse</span>' : ''}
-            ${currentSpec.dispels.disease ? '<span class="utility-pill" style="color: #fbbf24;">☣️ Disease</span>' : ''}
-            ${currentSpec.dispels.magic ? '<span class="utility-pill" style="color: #60a5fa;">✨ Magic</span>' : ''}
-            ${currentSpec.dispels.soothe || currentSpec.dispels.purgeMagic ? '<span class="utility-pill" style="color: #f472b6;">⚡ Purge/Soothe</span>' : ''}
-            ${currentSpec.perks.bloodlust ? '<span class="utility-pill" style="color: #ef4444;">🩸 Bloodlust</span>' : ''}
-            ${currentSpec.perks.battleRes ? '<span class="utility-pill" style="color: #eab308;">✝️ BRes</span>' : ''}
+            ${currentSpec.dispels.poison ? '<a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-link" style="color: #34d399;">🧪 Poison</a>' : ''}
+            ${currentSpec.dispels.curse ? '<a href="https://www.wowhead.com/spell=2782" target="_blank" data-wowhead="spell=2782" class="utility-pill wowhead-link" style="color: #c084fc;">🔮 Curse</a>' : ''}
+            ${currentSpec.dispels.disease ? '<a href="https://www.wowhead.com/spell=213644" target="_blank" data-wowhead="spell=213644" class="utility-pill wowhead-link" style="color: #fbbf24;">☣️ Disease</a>' : ''}
+            ${currentSpec.dispels.magic ? '<a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-link" style="color: #60a5fa;">✨ Magic</a>' : ''}
+            ${currentSpec.dispels.soothe || currentSpec.dispels.purgeMagic ? '<a href="https://www.wowhead.com/spell=2908" target="_blank" data-wowhead="spell=2908" class="utility-pill wowhead-link" style="color: #f472b6;">⚡ Purge/Soothe</a>' : ''}
+            ${currentSpec.perks.bloodlust ? '<a href="https://www.wowhead.com/spell=2825" target="_blank" data-wowhead="spell=2825" class="utility-pill wowhead-link" style="color: #ef4444;">🩸 Bloodlust</a>' : ''}
+            ${currentSpec.perks.battleRes ? '<a href="https://www.wowhead.com/spell=20484" target="_blank" data-wowhead="spell=20484" class="utility-pill wowhead-link" style="color: #eab308;">✝️ BRes</a>' : ''}
           </div>
         </div>
       `;
@@ -116,5 +115,10 @@ window.RosterView = class RosterView {
         this.updateSlotSpec(slotIdx, e.target.value);
       });
     });
+
+    // Refresh Wowhead tooltips engine on DOM updates
+    if (window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
+      window.$WowheadPower.refreshLinks();
+    }
   }
 };
