@@ -9,8 +9,15 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
   
-  <!-- Wowhead Tooltips Configuration -->
-  <script>const wowhead_tooltips = { colorlinks: true, iconicelinks: true, renamelinks: true };</script>
+  <!-- Wowhead Tooltips Configuration (renamelinks: false prevents Wowhead from replacing text or injecting unwanted spell names) -->
+  <script>
+    const wowhead_tooltips = {
+      colorlinks: false,
+      iconicelinks: false,
+      renamelinks: false,
+      hide: { rename: true }
+    };
+  </script>
   <script src="https://wow.zamimg.com/js/tooltips.js"></script>
 </head>
 <body>

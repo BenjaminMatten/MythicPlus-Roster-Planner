@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Midnight Season 2 Mythic+ Dungeon Database
- * Includes official Wowhead spell IDs for mouseover spell previews.
+ * Includes accurate Wowhead spell IDs for mouseover spell previews.
  */
 
 window.SEASON_2_DUNGEONS = [
@@ -27,7 +27,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'fang-venom-bolt',
-            spellId: 21546,
+            spellId: 384978,
             name: 'Venomous Bolt',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_poisonbolt.jpg',
             castType: 'interruptible_cast',
@@ -55,7 +55,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'fang-crush',
-            spellId: 19705,
+            spellId: 372735,
             name: 'Fang Crush',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_disembowel.jpg',
             castType: 'tank_buster',
@@ -117,7 +117,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-venom-wave',
-            spellId: 21546,
+            spellId: 385553,
             name: 'Void Venom Wave',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowfiend.jpg',
             castType: 'magic_aoe',
@@ -131,7 +131,7 @@ window.SEASON_2_DUNGEONS = [
           },
           {
             id: 'soul-siphon-fang',
-            spellId: 19705,
+            spellId: 372735,
             name: 'Soul Siphon Bite',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_shadowdance.jpg',
             castType: 'tank_buster',
@@ -295,7 +295,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'deadly-fan-of-knives',
-            spellId: 2818,
+            spellId: 51723,
             name: 'Deadly Poison Flurry',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_fanofknives.jpg',
             castType: 'magic_aoe',
@@ -553,7 +553,7 @@ window.SEASON_2_DUNGEONS = [
         abilities: [
           {
             id: 'void-rift-explosion',
-            spellId: 21546,
+            spellId: 385553,
             name: 'Void Rift Collapse',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg',
             castType: 'magic_aoe',
@@ -594,7 +594,7 @@ window.SEASON_2_DUNGEONS = [
           {
             id: 'spit-gold',
             spellId: 265773,
-            name: 'Spit Gold Debuff',
+            name: 'Spit Gold',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/inv_misc_coin_02.jpg',
             castType: 'magic_aoe',
             target: 'Random Player',
@@ -618,7 +618,7 @@ window.SEASON_2_DUNGEONS = [
           {
             id: 'severing-axe',
             spellId: 270487,
-            name: 'Severing Axe Bleed',
+            name: 'Severing Axe',
             icon: 'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_cleave.jpg',
             castType: 'bleed',
             target: 'Random Player',
