@@ -1,6 +1,6 @@
 /**
  * Roster & Mitigation Solver Sidebar Component
- * Renders player utility pills as interactive Wowhead links with mouseover tooltips.
+ * Embeds spell icon image mouseover preview links for player utility badges.
  */
 
 window.RosterView = class RosterView {
@@ -63,7 +63,7 @@ window.RosterView = class RosterView {
         return c.role === 'Melee DPS' || c.role === 'Ranged DPS';
       });
 
-      const kickLabel = currentSpec.interrupt.hasKick ? `🗡️ Kick: ${currentSpec.interrupt.name} (${currentSpec.interrupt.cd}s)` : '❌ No Lockout Kick';
+      const kickLabel = currentSpec.interrupt.hasKick ? `Kick: ${currentSpec.interrupt.name} (${currentSpec.interrupt.cd}s)` : 'No Kick';
       const kickColor = currentSpec.interrupt.hasKick ? '#f87171' : '#94a3b8';
 
       html += `
@@ -81,6 +81,7 @@ window.RosterView = class RosterView {
 
           <div class="player-utility-tags">
             <span class="utility-pill" style="color: ${kickColor}; border-color: rgba(255,255,255,0.15);">
+              <img src="${currentSpec.interrupt.icon || currentSpec.icon}" class="utility-icon-img" alt="${currentSpec.interrupt.name}" />
               ${kickLabel}
             </span>
             ${currentSpec.ccDisrupts && currentSpec.ccDisrupts.length > 0 ? `
@@ -88,13 +89,41 @@ window.RosterView = class RosterView {
                 🌀 CC: ${currentSpec.ccDisrupts[0]}
               </span>
             ` : ''}
-            ${currentSpec.dispels.poison ? '<a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-link" style="color: #34d399;">🧪 Poison</a>' : ''}
-            ${currentSpec.dispels.curse ? '<a href="https://www.wowhead.com/spell=2782" target="_blank" data-wowhead="spell=2782" class="utility-pill wowhead-link" style="color: #c084fc;">🔮 Curse</a>' : ''}
-            ${currentSpec.dispels.disease ? '<a href="https://www.wowhead.com/spell=213644" target="_blank" data-wowhead="spell=213644" class="utility-pill wowhead-link" style="color: #fbbf24;">☣️ Disease</a>' : ''}
-            ${currentSpec.dispels.magic ? '<a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-link" style="color: #60a5fa;">✨ Magic</a>' : ''}
-            ${currentSpec.dispels.soothe || currentSpec.dispels.purgeMagic ? '<a href="https://www.wowhead.com/spell=2908" target="_blank" data-wowhead="spell=2908" class="utility-pill wowhead-link" style="color: #f472b6;">⚡ Purge/Soothe</a>' : ''}
-            ${currentSpec.perks.bloodlust ? '<a href="https://www.wowhead.com/spell=2825" target="_blank" data-wowhead="spell=2825" class="utility-pill wowhead-link" style="color: #ef4444;">🩸 Bloodlust</a>' : ''}
-            ${currentSpec.perks.battleRes ? '<a href="https://www.wowhead.com/spell=20484" target="_blank" data-wowhead="spell=20484" class="utility-pill wowhead-link" style="color: #eab308;">✝️ BRes</a>' : ''}
+            ${currentSpec.dispels.poison ? `
+              <a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-icon-link" style="color: #34d399;" title="Poison Dispel Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifypoison.jpg" class="utility-icon-img" alt="Poison Dispel" /> Poison
+              </a>
+            ` : ''}
+            ${currentSpec.dispels.curse ? `
+              <a href="https://www.wowhead.com/spell=2782" target="_blank" data-wowhead="spell=2782" class="utility-pill wowhead-icon-link" style="color: #c084fc;" title="Curse Dispel Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_removecurse.jpg" class="utility-icon-img" alt="Curse Dispel" /> Curse
+              </a>
+            ` : ''}
+            ${currentSpec.dispels.disease ? `
+              <a href="https://www.wowhead.com/spell=213644" target="_blank" data-wowhead="spell=213644" class="utility-pill wowhead-icon-link" style="color: #fbbf24;" title="Disease Dispel Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_nullifydisease.jpg" class="utility-icon-img" alt="Disease Dispel" /> Disease
+              </a>
+            ` : ''}
+            ${currentSpec.dispels.magic ? `
+              <a href="https://www.wowhead.com/spell=527" target="_blank" data-wowhead="spell=527" class="utility-pill wowhead-icon-link" style="color: #60a5fa;" title="Magic Dispel Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_holy_dispelmagic.jpg" class="utility-icon-img" alt="Magic Dispel" /> Magic
+              </a>
+            ` : ''}
+            ${currentSpec.dispels.soothe || currentSpec.dispels.purgeMagic ? `
+              <a href="https://www.wowhead.com/spell=2908" target="_blank" data-wowhead="spell=2908" class="utility-pill wowhead-icon-link" style="color: #f472b6;" title="Purge / Soothe Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/ability_druid_enrage.jpg" class="utility-icon-img" alt="Soothe / Purge" /> Purge/Soothe
+              </a>
+            ` : ''}
+            ${currentSpec.perks.bloodlust ? `
+              <a href="https://www.wowhead.com/spell=2825" target="_blank" data-wowhead="spell=2825" class="utility-pill wowhead-icon-link" style="color: #ef4444;" title="Bloodlust Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_bloodlust.jpg" class="utility-icon-img" alt="Bloodlust" /> Bloodlust
+              </a>
+            ` : ''}
+            ${currentSpec.perks.battleRes ? `
+              <a href="https://www.wowhead.com/spell=20484" target="_blank" data-wowhead="spell=20484" class="utility-pill wowhead-icon-link" style="color: #eab308;" title="Battle Res Preview">
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_nature_reincarnation.jpg" class="utility-icon-img" alt="BRes" /> BRes
+              </a>
+            ` : ''}
           </div>
         </div>
       `;

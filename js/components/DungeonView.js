@@ -1,6 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Renders interactive Wowhead links with mouseover tooltips on spells and abilities.
+ * Uses the spell icon image as the primary Wowhead mouseover tooltip link.
  */
 
 window.DungeonView = class DungeonView {
@@ -155,15 +155,12 @@ window.DungeonView = class DungeonView {
     return `
       <div class="ability-card">
         <div class="ability-top-row">
-          <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}">
+          <!-- Spell Icon image is the Wowhead mouseover preview link -->
+          <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}" class="wowhead-icon-link" title="Hover for Wowhead spell preview">
             <img src="${ability.icon}" alt="${ability.name}" class="ability-icon" onerror="this.src='https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg'" />
           </a>
           <div class="ability-title-box">
-            <div class="ability-name">
-              <a href="${wowheadUrl}" target="_blank" data-wowhead="spell=${spellId}" class="wowhead-ability-link">
-                ${ability.name} <span class="wowhead-external-icon">↗</span>
-              </a>
-            </div>
+            <div class="ability-name">${ability.name}</div>
             <div class="ability-meta">
               <span>⏱ ${ability.castTime}</span>
               <span>• ${ability.frequency}</span>
