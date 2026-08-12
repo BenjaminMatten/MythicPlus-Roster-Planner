@@ -4827,8 +4827,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Battle for Azeroth Classic",
     "zone": "Zuldazar",
     "badge": "LEGACY CLASSIC",
-    "backgroundUrl": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg",
-    "bannerUrl": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg",
+    "backgroundUrl": "images/kings-rest.jpg",
+    "bannerUrl": "images/kings-rest.jpg",
     "accentColor": "#eab308",
     "description": "The ancient tomb of Zandalari kings. Famed for brutal shadow curses, mummy minions, spit gold mechanics, and tight halls.",
     "keyMechanics": [
@@ -6130,7 +6130,7 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest",
     "youtubeId": "pT8A8RW9QTc",
     "videoUrl": "https://youtu.be/pT8A8RW9QTc",
-    "bgImage": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg"
+    "bgImage": "images/kings-rest.jpg"
   },
   {
     "id": "ruby-life-pools",
