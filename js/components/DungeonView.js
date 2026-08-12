@@ -1,7 +1,7 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Renders left-adjusted Method.gg guide link, animated video thumbnail preview card,
- * with pulse ring mathematically centered directly over the play icon.
+ * Renders top description banner with dungeon background graphic overlay, Method.gg guide link,
+ * animated video thumbnail preview card, and mathematically centered pulse ring.
  */
 
 window.DungeonView = class DungeonView {
@@ -30,7 +30,7 @@ window.DungeonView = class DungeonView {
   render() {
     if (!this.currentDungeon || !this.container) return;
 
-    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl, youtubeId } = this.currentDungeon;
+    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl, youtubeId, bgImage } = this.currentDungeon;
 
     // Filter Mobs (Bosses Only, Trash Only, or All)
     const filteredMobs = mobs.filter(mob => {
@@ -67,8 +67,10 @@ window.DungeonView = class DungeonView {
       return { ...mob, abilities: matchingAbilities };
     }).filter(mob => mob.abilities.length > 0);
 
+    const bannerBgStyle = bgImage ? `background: linear-gradient(90deg, rgba(13,18,31,0.92) 0%, rgba(13,18,31,0.75) 60%, rgba(13,18,31,0.4) 100%), url('${bgImage}'); background-size: cover; background-position: center;` : '';
+
     let html = `
-      <div class="dungeon-banner glass-card" style="padding: 1.25rem; margin-bottom: 1.25rem; border-left: 4px solid ${accentColor};">
+      <div class="dungeon-banner glass-card" style="padding: 1.25rem; margin-bottom: 1.25rem; border-left: 4px solid ${accentColor}; ${bannerBgStyle}">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem;">
           <div style="flex: 1; min-width: 300px;">
             <div style="font-size: 0.75rem; color: ${accentColor}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">

@@ -6920,6 +6920,7 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools",
     "youtubeId": "u-TVxNPFMZs",
-    "videoUrl": "https://youtu.be/u-TVxNPFMZs"
+    "videoUrl": "https://youtu.be/u-TVxNPFMZs",
+    "bgImage": "images/ruby-life-pools.png"
   }
 ];
