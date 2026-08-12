@@ -4869,8 +4869,16 @@ window.SEASON_2_DUNGEONS = [
     "bgImage": "images/voidscar-arena.png",
     "maps": [
       {
-        "name": "Voidscar Arena Overview",
-        "url": "images/voidscar-arena.png"
+        "name": "Arena Lower Ring (Floor 1)",
+        "url": "images/maps/voidscar-arena-map-1.jpg"
+      },
+      {
+        "name": "Grand Arena Pit (Floor 2)",
+        "url": "images/maps/voidscar-arena-map-2.jpg"
+      },
+      {
+        "name": "Challenger Sanctum (Floor 3)",
+        "url": "images/maps/voidscar-arena-map-3.jpg"
       }
     ]
   },
