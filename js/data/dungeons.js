@@ -4706,7 +4706,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena",
     "youtubeId": "Da9hWBW_6JE",
-    "videoUrl": "https://youtu.be/Da9hWBW_6JE"
+    "videoUrl": "https://youtu.be/Da9hWBW_6JE",
+    "bgImage": "images/voidscar-arena.png"
   },
   {
     "id": "kings-rest",
