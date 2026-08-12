@@ -811,7 +811,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs"
+    "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs",
+    "youtubeId": "cgM-EioPF0g",
+    "videoUrl": "https://youtu.be/cgM-EioPF0g"
   },
   {
     "id": "murder-row",
@@ -1888,7 +1890,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/murder-row"
+    "methodUrl": "https://www.method.gg/guides/dungeons/murder-row",
+    "youtubeId": "jE7g21vi290",
+    "videoUrl": "https://youtu.be/jE7g21vi290"
   },
   {
     "id": "den-of-nalorakk",
@@ -2756,7 +2760,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk"
+    "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk",
+    "youtubeId": "gNJ-3-6k75A",
+    "videoUrl": "https://youtu.be/gNJ-3-6k75A"
   },
   {
     "id": "the-blinding-vale",
@@ -3634,7 +3640,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale"
+    "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale",
+    "youtubeId": "HcvkIzRTdtY",
+    "videoUrl": "https://youtu.be/HcvkIzRTdtY"
   },
   {
     "id": "voidscar-arena",
@@ -4696,7 +4704,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena"
+    "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena",
+    "youtubeId": "Da9hWBW_6JE",
+    "videoUrl": "https://youtu.be/Da9hWBW_6JE"
   },
   {
     "id": "kings-rest",
@@ -5977,7 +5987,9 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest"
+    "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest",
+    "youtubeId": "pT8A8RW9QTc",
+    "videoUrl": "https://youtu.be/pT8A8RW9QTc"
   },
   {
     "id": "ruby-life-pools",
@@ -6906,6 +6918,8 @@ window.SEASON_2_DUNGEONS = [
         ]
       }
     ],
-    "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools"
+    "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools",
+    "youtubeId": "u-TVxNPFMZs",
+    "videoUrl": "https://youtu.be/u-TVxNPFMZs"
   }
 ];

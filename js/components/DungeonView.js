@@ -1,6 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Renders top description banner with Method.gg Dungeon Guide button.
+ * Renders left-adjusted Method.gg guide link and embedded YouTube Video strategy guide preview.
  */
 
 window.DungeonView = class DungeonView {
@@ -29,7 +29,7 @@ window.DungeonView = class DungeonView {
   render() {
     if (!this.currentDungeon || !this.container) return;
 
-    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl } = this.currentDungeon;
+    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl, youtubeId } = this.currentDungeon;
 
     // Filter Mobs (Bosses Only, Trash Only, or All)
     const filteredMobs = mobs.filter(mob => {
@@ -69,23 +69,41 @@ window.DungeonView = class DungeonView {
     let html = `
       <div class="dungeon-banner glass-card" style="padding: 1.25rem; margin-bottom: 1.25rem; border-left: 4px solid ${accentColor};">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-          <div>
+          <div style="flex: 1; min-width: 300px;">
             <div style="font-size: 0.75rem; color: ${accentColor}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">
               ${expansion} • ${zone}
             </div>
             <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">${name}</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 700px; margin-top: 0.3rem;">${description}</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 750px; margin-top: 0.3rem;">${description}</p>
+            
+            <!-- Left-Adjusted Guide Link & Video Preview Action Bar -->
+            <div class="banner-action-bar" style="display: flex; gap: 0.6rem; margin-top: 0.85rem; flex-wrap: wrap; align-items: center;">
+              ${methodUrl ? `
+                <a href="${methodUrl}" target="_blank" rel="noopener noreferrer" class="method-guide-btn" title="View official Method.gg dungeon guide">
+                  📖 Method.gg Dungeon Guide ↗
+                </a>
+              ` : ''}
+              ${youtubeId ? `
+                <button id="btn-toggle-video" class="video-guide-btn" data-youtube-id="${youtubeId}">
+                  ▶️ Watch Video Guide Preview
+                </button>
+              ` : ''}
+            </div>
           </div>
           
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;">
-            ${methodUrl ? `
-              <a href="${methodUrl}" target="_blank" rel="noopener noreferrer" class="method-guide-btn" title="View official Method.gg dungeon guide">
-                📖 Method.gg Dungeon Guide ↗
-              </a>
-            ` : ''}
-            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-              ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
-            </div>
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
+            ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Embedded YouTube Video Strategy Guide Preview Frame -->
+        <div id="video-preview-container" class="video-preview-box" style="display: none; margin-top: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #ffffff;">🎬 ${name} - Video Strategy Guide</span>
+            <button id="btn-close-video" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer;">✕</button>
+          </div>
+          <div class="video-embed-wrapper">
+            <iframe id="video-iframe" src="" title="${name} Video Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -127,6 +145,33 @@ window.DungeonView = class DungeonView {
 
     html += `</div>`;
     this.container.innerHTML = html;
+
+    // Attach YouTube Video Preview Toggle Listeners
+    const btnVideo = this.container.querySelector('#btn-toggle-video');
+    const videoContainer = this.container.querySelector('#video-preview-container');
+    const videoIframe = this.container.querySelector('#video-iframe');
+    const btnClose = this.container.querySelector('#btn-close-video');
+
+    if (btnVideo && videoContainer && videoIframe) {
+      btnVideo.addEventListener('click', () => {
+        const yid = btnVideo.getAttribute('data-youtube-id');
+        const isHidden = videoContainer.style.display === 'none';
+        if (isHidden) {
+          videoIframe.src = `https://www.youtube-nocookie.com/embed/${yid}?autoplay=1`;
+          videoContainer.style.display = 'block';
+        } else {
+          videoIframe.src = '';
+          videoContainer.style.display = 'none';
+        }
+      });
+    }
+
+    if (btnClose && videoContainer && videoIframe) {
+      btnClose.addEventListener('click', () => {
+        videoIframe.src = '';
+        videoContainer.style.display = 'none';
+      });
+    }
 
     // Refresh Wowhead tooltips engine on DOM updates
     if (window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
