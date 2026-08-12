@@ -28,14 +28,17 @@ window.App = class App {
     const nav = document.getElementById('dungeon-tabs');
     if (!nav) return;
 
-    nav.innerHTML = this.dungeons.map(d => `
-      <div class="dungeon-tab-card ${d.id === (this.currentDungeon ? this.currentDungeon.id : '') ? 'active' : ''}" 
-           data-dungeon-id="${d.id}" 
-           style="background-image: url('${d.bannerUrl}');">
-        <div class="dungeon-tab-title">${d.name}</div>
-        <div class="dungeon-tab-badge">${d.expansion} • ${d.mobs.length} Mobs</div>
-      </div>
-    `).join('');
+    nav.innerHTML = this.dungeons.map(d => {
+      const imgUrl = d.bgImage || d.bannerUrl || d.backgroundUrl;
+      return `
+        <div class="dungeon-tab-card ${d.id === (this.currentDungeon ? this.currentDungeon.id : '') ? 'active' : ''}" 
+             data-dungeon-id="${d.id}" 
+             style="background-image: url('${imgUrl}');">
+          <div class="dungeon-tab-title">${d.name}</div>
+          <div class="dungeon-tab-badge">${d.expansion} • ${d.mobs.length} Mobs</div>
+        </div>
+      `;
+    }).join('');
 
     // Attach click handlers
     const cards = nav.querySelectorAll('.dungeon-tab-card');
@@ -67,7 +70,8 @@ window.App = class App {
     // Update background wallpaper transition
     const bgOverlay = document.getElementById('app-background-overlay');
     if (bgOverlay) {
-      bgOverlay.style.backgroundImage = `url('${dungeon.backgroundUrl}')`;
+      const bgImg = dungeon.bgImage || dungeon.backgroundUrl || dungeon.bannerUrl;
+      bgOverlay.style.backgroundImage = `url('${bgImg}')`;
     }
 
     // Render dungeon view & evaluate matrix
