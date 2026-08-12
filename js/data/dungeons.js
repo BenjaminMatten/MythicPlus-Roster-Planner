@@ -1943,8 +1943,16 @@ window.SEASON_2_DUNGEONS = [
     "bgImage": "images/murder-row.png",
     "maps": [
       {
-        "name": "Murder Row Overview",
-        "url": "images/murder-row.png"
+        "name": "Lithiel's Landing (Floor 1)",
+        "url": "images/maps/murder-row-map-1.jpg"
+      },
+      {
+        "name": "Upper Balconies (Floor 2)",
+        "url": "images/maps/murder-row-map-2.jpg"
+      },
+      {
+        "name": "The Illicit Realm (Floor 3)",
+        "url": "images/maps/murder-row-map-3.jpg"
       }
     ]
   },
