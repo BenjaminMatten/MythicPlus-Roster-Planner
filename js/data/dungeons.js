@@ -833,8 +833,16 @@ window.SEASON_2_DUNGEONS = [
     "bgImage": "images/altar-of-fangs.jpg",
     "maps": [
       {
-        "name": "Altar of Fangs Overview",
-        "url": "images/altar-of-fangs.jpg"
+        "name": "Sacrificial Approach (Floor 1)",
+        "url": "images/maps/altar-of-fangs-map-1.jpg"
+      },
+      {
+        "name": "Mutation Chambers (Floor 2)",
+        "url": "images/maps/altar-of-fangs-map-2.jpg"
+      },
+      {
+        "name": "Sanctum of the Serpent (Floor 3)",
+        "url": "images/maps/altar-of-fangs-map-3.jpg"
       }
     ]
   },
