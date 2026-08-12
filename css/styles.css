@@ -221,6 +221,32 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
 }
 
+/* Method.gg Guide Button */
+.method-guide-btn {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(168, 85, 247, 0.25));
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  cursor: pointer;
+}
+
+.method-guide-btn:hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.45), rgba(168, 85, 247, 0.45));
+  border-color: #ef4444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+}
+
 /* Dungeon Selection Strip */
 .dungeon-nav-strip {
   display: flex;

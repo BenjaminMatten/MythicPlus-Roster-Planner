@@ -810,7 +810,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs"
   },
   {
     "id": "murder-row",
@@ -1886,7 +1887,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/murder-row"
   },
   {
     "id": "den-of-nalorakk",
@@ -2753,7 +2755,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk"
   },
   {
     "id": "the-blinding-vale",
@@ -3630,7 +3633,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale"
   },
   {
     "id": "voidscar-arena",
@@ -4691,7 +4695,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena"
   },
   {
     "id": "kings-rest",
@@ -5971,7 +5976,8 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest"
   },
   {
     "id": "ruby-life-pools",
@@ -6899,6 +6905,7 @@ window.SEASON_2_DUNGEONS = [
           }
         ]
       }
-    ]
+    ],
+    "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools"
   }
 ];

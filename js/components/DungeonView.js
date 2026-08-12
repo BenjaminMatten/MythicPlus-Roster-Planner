@@ -1,6 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Supports filtering by Bosses Only, Trash Only, or specific hazard mechanics.
+ * Renders top description banner with Method.gg Dungeon Guide button.
  */
 
 window.DungeonView = class DungeonView {
@@ -29,7 +29,7 @@ window.DungeonView = class DungeonView {
   render() {
     if (!this.currentDungeon || !this.container) return;
 
-    const { name, expansion, zone, description, keyMechanics, mobs, accentColor } = this.currentDungeon;
+    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl } = this.currentDungeon;
 
     // Filter Mobs (Bosses Only, Trash Only, or All)
     const filteredMobs = mobs.filter(mob => {
@@ -76,8 +76,16 @@ window.DungeonView = class DungeonView {
             <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">${name}</h2>
             <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 700px; margin-top: 0.3rem;">${description}</p>
           </div>
-          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
-            ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
+          
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;">
+            ${methodUrl ? `
+              <a href="${methodUrl}" target="_blank" rel="noopener noreferrer" class="method-guide-btn" title="View official Method.gg dungeon guide">
+                📖 Method.gg Dungeon Guide ↗
+              </a>
+            ` : ''}
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
+              ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
+            </div>
           </div>
         </div>
       </div>
