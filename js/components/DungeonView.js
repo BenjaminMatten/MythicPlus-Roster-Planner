@@ -1,7 +1,7 @@
 /**
  * Dungeon Mob & Ability Explorer Component
  * Renders left-adjusted Method.gg guide link, animated video thumbnail preview card,
- * and embedded YouTube video frame configured with referrerpolicy="strict-origin-when-cross-origin".
+ * with pulse ring mathematically centered directly over the play icon.
  */
 
 window.DungeonView = class DungeonView {
@@ -90,10 +90,12 @@ window.DungeonView = class DungeonView {
                   <div class="video-thumbnail-wrapper">
                     <img src="https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg" alt="${name} Video Guide Preview" class="video-thumbnail-img" />
                     <div class="video-play-overlay">
-                      <div class="video-play-icon">▶</div>
+                      <div class="video-play-icon">
+                        ▶
+                        <div class="video-pulse-ring"></div>
+                      </div>
                       <span class="video-play-text">Video Strategy Guide</span>
                     </div>
-                    <div class="video-pulse-ring"></div>
                   </div>
                 </button>
               ` : ''}
