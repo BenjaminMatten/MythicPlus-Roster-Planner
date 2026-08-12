@@ -11,8 +11,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Midnight (Patch 12.1)",
     "zone": "Coiled Isle",
     "badge": "NEW DUNGEON",
-    "backgroundUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/altar-of-fangs.jpg",
+    "bannerUrl": "images/altar-of-fangs.jpg",
     "accentColor": "#10b981",
     "description": "An ancient serpent temple hidden on the Coiled Isle where shadow-venom cultists summon primordial serpent spirits.",
     "keyMechanics": [
@@ -829,7 +829,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs",
     "youtubeId": "cgM-EioPF0g",
-    "videoUrl": "https://youtu.be/cgM-EioPF0g"
+    "videoUrl": "https://youtu.be/cgM-EioPF0g",
+    "bgImage": "images/altar-of-fangs.jpg"
   },
   {
     "id": "murder-row",
@@ -838,8 +839,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Midnight",
     "zone": "Silvermoon City",
     "badge": "SEASON 2 ROTATION",
-    "backgroundUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/murder-row.png",
+    "bannerUrl": "images/murder-row.png",
     "accentColor": "#ef4444",
     "description": "The seediest underbelly of Silvermoon City where Void-influenced Sin'dorei rogues and felwyrms plot assassinations.",
     "keyMechanics": [
@@ -1932,7 +1933,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/murder-row",
     "youtubeId": "jE7g21vi290",
-    "videoUrl": "https://youtu.be/jE7g21vi290"
+    "videoUrl": "https://youtu.be/jE7g21vi290",
+    "bgImage": "images/murder-row.png"
   },
   {
     "id": "den-of-nalorakk",
@@ -1941,8 +1943,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Midnight",
     "zone": "Zul'Aman",
     "badge": "SEASON 2 ROTATION",
-    "backgroundUrl": "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/den-of-nalorakk.png",
+    "bannerUrl": "images/den-of-nalorakk.png",
     "accentColor": "#f59e0b",
     "description": "The sacred bear grounds of Zul'Aman where primal Amani bear gods and witch doctors invoke ancestral rage.",
     "keyMechanics": [
@@ -2823,7 +2825,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk",
     "youtubeId": "gNJ-3-6k75A",
-    "videoUrl": "https://youtu.be/gNJ-3-6k75A"
+    "videoUrl": "https://youtu.be/gNJ-3-6k75A",
+    "bgImage": "images/den-of-nalorakk.png"
   },
   {
     "id": "the-blinding-vale",
@@ -2832,8 +2835,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Midnight",
     "zone": "Quel'Thalas",
     "badge": "SEASON 2 ROTATION",
-    "backgroundUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/the-blinding-vale.png",
+    "bannerUrl": "images/the-blinding-vale.png",
     "accentColor": "#3b82f6",
     "description": "A radiant sun-glen infused with blinding Light power where wild eagle guardians and sun-bow archers hunt invaders.",
     "keyMechanics": [
@@ -3722,7 +3725,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale",
     "youtubeId": "HcvkIzRTdtY",
-    "videoUrl": "https://youtu.be/HcvkIzRTdtY"
+    "videoUrl": "https://youtu.be/HcvkIzRTdtY",
+    "bgImage": "images/the-blinding-vale.png"
   },
   {
     "id": "voidscar-arena",
@@ -3731,8 +3735,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Midnight",
     "zone": "Void Scar",
     "badge": "SEASON 2 ROTATION",
-    "backgroundUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/voidscar-arena.png",
+    "bannerUrl": "images/voidscar-arena.png",
     "accentColor": "#a855f7",
     "description": "A cosmic void arena where dark gladiators pit shadow energy against mortal challengers.",
     "keyMechanics": [
@@ -4823,8 +4827,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Battle for Azeroth Classic",
     "zone": "Zuldazar",
     "badge": "LEGACY CLASSIC",
-    "backgroundUrl": "https://images.unsplash.com/photo-1544084944-15269ec7b5a0?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg",
+    "bannerUrl": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg",
     "accentColor": "#eab308",
     "description": "The ancient tomb of Zandalari kings. Famed for brutal shadow curses, mummy minions, spit gold mechanics, and tight halls.",
     "keyMechanics": [
@@ -6125,7 +6129,8 @@ window.SEASON_2_DUNGEONS = [
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest",
     "youtubeId": "pT8A8RW9QTc",
-    "videoUrl": "https://youtu.be/pT8A8RW9QTc"
+    "videoUrl": "https://youtu.be/pT8A8RW9QTc",
+    "bgImage": "https://wow.zamimg.com/uploads/screenshots/normal/748721-kings-rest.jpg"
   },
   {
     "id": "ruby-life-pools",
@@ -6134,8 +6139,8 @@ window.SEASON_2_DUNGEONS = [
     "expansion": "Dragonflight Classic",
     "zone": "The Waking Shores",
     "badge": "LEGACY CLASSIC",
-    "backgroundUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
-    "bannerUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+    "backgroundUrl": "images/ruby-life-pools.png",
+    "bannerUrl": "images/ruby-life-pools.png",
     "accentColor": "#ec4899",
     "description": "The red dragonflight nesting sanctuary. Heavy fire damage, lightning gale gusts, interrupts, and intense dragonfire overlaps.",
     "keyMechanics": [
