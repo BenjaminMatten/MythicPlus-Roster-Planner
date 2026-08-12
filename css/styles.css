@@ -226,9 +226,9 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(168, 85, 247, 0.25));
   border: 1px solid rgba(239, 68, 68, 0.5);
   color: #ffffff;
-  padding: 0.45rem 0.9rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;
   display: inline-flex;
@@ -237,6 +237,7 @@ h1, h2, h3, h4 {
   transition: var(--transition);
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
   cursor: pointer;
+  height: 48px;
 }
 
 .method-guide-btn:hover {
@@ -247,61 +248,103 @@ h1, h2, h3, h4 {
   color: #ffffff;
 }
 
-/* Video Guide Toggle Button */
-.video-guide-btn {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25));
-  border: 1px solid rgba(99, 102, 241, 0.5);
-  color: #ffffff;
-  padding: 0.45rem 0.9rem;
+/* Animated Video Thumbnail Preview Card */
+.video-thumbnail-card {
+  text-decoration: none;
+  display: inline-block;
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-}
-
-.video-guide-btn:hover {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(168, 85, 247, 0.45));
-  border-color: #6366f1;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
-}
-
-/* Collapsible Video Preview Container & Iframe Wrapper */
-.video-preview-box {
-  background: rgba(7, 9, 14, 0.95);
-  border: 1px solid rgba(168, 85, 247, 0.4);
-  border-radius: var(--radius-sm);
-  padding: 0.75rem;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.video-embed-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
   overflow: hidden;
-  border-radius: 6px;
-  border: 1px solid var(--border-subtle);
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
-.video-embed-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-thumbnail-wrapper {
+  position: relative;
+  width: 170px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  background: #0d121f;
+}
+
+.video-thumbnail-img {
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.video-thumbnail-card:hover .video-thumbnail-img {
+  transform: scale(1.12);
+  filter: brightness(0.9) contrast(1.2);
+}
+
+.video-thumbnail-card:hover .video-thumbnail-wrapper {
+  border-color: #a855f7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 9, 14, 0.5) 0%, rgba(7, 9, 14, 0.85) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 0.6rem;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.video-play-icon {
+  width: 26px;
+  height: 26px;
+  background: rgba(239, 68, 68, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.7);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.video-thumbnail-card:hover .video-play-icon {
+  transform: scale(1.15);
+  background: #ef4444;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.9);
+}
+
+.video-play-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.2;
+}
+
+.video-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(239, 68, 68, 0.8);
+  animation: pulseRing 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0% { transform: translateY(-50%) scale(0.8); opacity: 1; }
+  100% { transform: translateY(-50%) scale(1.6); opacity: 0; }
 }
 
 /* Dungeon Selection Strip */

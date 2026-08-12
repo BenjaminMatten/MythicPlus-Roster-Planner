@@ -1,7 +1,6 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Renders left-adjusted Method.gg guide link and embedded YouTube Video strategy guide preview.
- * Fixes YouTube Error 153 under local file:// protocol with standard embed URL & direct YouTube fallback link.
+ * Renders left-adjusted Method.gg guide link and an animated video thumbnail preview card.
  */
 
 window.DungeonView = class DungeonView {
@@ -69,7 +68,7 @@ window.DungeonView = class DungeonView {
 
     let html = `
       <div class="dungeon-banner glass-card" style="padding: 1.25rem; margin-bottom: 1.25rem; border-left: 4px solid ${accentColor};">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem;">
           <div style="flex: 1; min-width: 300px;">
             <div style="font-size: 0.75rem; color: ${accentColor}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">
               ${expansion} • ${zone}
@@ -77,39 +76,31 @@ window.DungeonView = class DungeonView {
             <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">${name}</h2>
             <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 750px; margin-top: 0.3rem;">${description}</p>
             
-            <!-- Left-Adjusted Guide Link & Video Preview Action Bar -->
-            <div class="banner-action-bar" style="display: flex; gap: 0.6rem; margin-top: 0.85rem; flex-wrap: wrap; align-items: center;">
+            <!-- Left-Adjusted Action Bar with Method Guide Link & Animated Video Thumbnail Preview Card -->
+            <div class="banner-action-bar" style="display: flex; gap: 0.85rem; margin-top: 0.85rem; flex-wrap: wrap; align-items: center;">
               ${methodUrl ? `
                 <a href="${methodUrl}" target="_blank" rel="noopener noreferrer" class="method-guide-btn" title="View official Method.gg dungeon guide">
                   📖 Method.gg Dungeon Guide ↗
                 </a>
               ` : ''}
+              
               ${youtubeId ? `
-                <button id="btn-toggle-video" class="video-guide-btn" data-youtube-id="${youtubeId}">
-                  ▶️ Watch Video Guide Preview
-                </button>
+                <a href="https://www.youtube.com/watch?v=${youtubeId}" target="_blank" rel="noopener noreferrer" class="video-thumbnail-card" title="Click to watch full strategy video on YouTube">
+                  <div class="video-thumbnail-wrapper">
+                    <img src="https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg" alt="${name} Video Guide Preview" class="video-thumbnail-img" />
+                    <div class="video-play-overlay">
+                      <div class="video-play-icon">▶</div>
+                      <span class="video-play-text">Video Strategy Guide ↗</span>
+                    </div>
+                    <div class="video-pulse-ring"></div>
+                  </div>
+                </a>
               ` : ''}
             </div>
           </div>
           
           <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
             ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
-          </div>
-        </div>
-
-        <!-- Embedded YouTube Video Strategy Guide Preview Frame -->
-        <div id="video-preview-container" class="video-preview-box" style="display: none; margin-top: 1rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #ffffff;">🎬 ${name} - Video Strategy Guide</span>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <a id="video-direct-link" href="https://www.youtube.com/watch?v=${youtubeId || 'cgM-EioPF0g'}" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; color: #a855f7; font-weight: 700; text-decoration: none; background: rgba(168,85,247,0.15); padding: 0.2rem 0.6rem; border-radius: 4px; border: 1px solid rgba(168,85,247,0.4);">
-                Open on YouTube ↗
-              </a>
-              <button id="btn-close-video" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer;">✕</button>
-            </div>
-          </div>
-          <div class="video-embed-wrapper">
-            <iframe id="video-iframe" src="" title="${name} Video Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -151,35 +142,6 @@ window.DungeonView = class DungeonView {
 
     html += `</div>`;
     this.container.innerHTML = html;
-
-    // Attach YouTube Video Preview Toggle Listeners
-    const btnVideo = this.container.querySelector('#btn-toggle-video');
-    const videoContainer = this.container.querySelector('#video-preview-container');
-    const videoIframe = this.container.querySelector('#video-iframe');
-    const directLink = this.container.querySelector('#video-direct-link');
-    const btnClose = this.container.querySelector('#btn-close-video');
-
-    if (btnVideo && videoContainer && videoIframe) {
-      btnVideo.addEventListener('click', () => {
-        const yid = btnVideo.getAttribute('data-youtube-id');
-        const isHidden = videoContainer.style.display === 'none';
-        if (isHidden) {
-          videoIframe.src = `https://www.youtube.com/embed/${yid}`;
-          if (directLink) directLink.href = `https://www.youtube.com/watch?v=${yid}`;
-          videoContainer.style.display = 'block';
-        } else {
-          videoIframe.src = '';
-          videoContainer.style.display = 'none';
-        }
-      });
-    }
-
-    if (btnClose && videoContainer && videoIframe) {
-      btnClose.addEventListener('click', () => {
-        videoIframe.src = '';
-        videoContainer.style.display = 'none';
-      });
-    }
 
     // Refresh Wowhead tooltips engine on DOM updates
     if (window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
