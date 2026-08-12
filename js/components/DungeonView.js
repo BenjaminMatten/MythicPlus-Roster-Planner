@@ -1,6 +1,7 @@
 /**
  * Dungeon Mob & Ability Explorer Component
  * Renders left-adjusted Method.gg guide link, animated video thumbnail preview card,
+ * interactive dungeon parchment map gallery viewer with multi-floor support,
  * and dynamically calculates mob & boss health scaled by the selected Mythic+ Key Level (+2 to +15+).
  */
 
@@ -76,7 +77,7 @@ window.DungeonView = class DungeonView {
   render() {
     if (!this.currentDungeon || !this.container) return;
 
-    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl, youtubeId, bgImage } = this.currentDungeon;
+    const { name, expansion, zone, description, keyMechanics, mobs, accentColor, methodUrl, youtubeId, bgImage, maps } = this.currentDungeon;
 
     // Filter Mobs (Bosses Only, Trash Only, or All)
     const filteredMobs = mobs.filter(mob => {
@@ -125,12 +126,18 @@ window.DungeonView = class DungeonView {
             <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">${name}</h2>
             <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 750px; margin-top: 0.3rem;">${description}</p>
             
-            <!-- Left-Adjusted Action Bar with Method Guide Link & Animated Video Thumbnail Preview Card -->
+            <!-- Left-Adjusted Action Bar with Method Guide Link, Animated Video Thumbnail Card, & Dungeon Map Viewer Button -->
             <div class="banner-action-bar" style="display: flex; gap: 0.85rem; margin-top: 0.85rem; flex-wrap: wrap; align-items: center;">
               ${methodUrl ? `
                 <a href="${methodUrl}" target="_blank" rel="noopener noreferrer" class="method-guide-btn" title="View official Method.gg dungeon guide">
                   📖 Method.gg Dungeon Guide ↗
                 </a>
+              ` : ''}
+
+              ${maps && maps.length > 0 ? `
+                <button id="btn-toggle-map" class="map-guide-btn" title="Click to view dungeon parchment map">
+                  🗺️ Dungeon Map (${maps.length})
+                </button>
               ` : ''}
               
               ${youtubeId ? `
@@ -152,6 +159,28 @@ window.DungeonView = class DungeonView {
           
           <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
             ${keyMechanics.map(m => `<span class="season-tag" style="background: rgba(255,255,255,0.05); color: #e2e8f0; border-color: rgba(255,255,255,0.15);">${m}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Embedded Dungeon Parchment Map Viewer Frame -->
+        <div id="map-preview-container" class="map-preview-box" style="display: none; margin-top: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #ffffff;">🗺️ ${name} - Official In-Game Dungeon Map</span>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div id="map-floor-selector" style="display: flex; gap: 0.35rem;">
+                ${maps && maps.length > 1 ? maps.map((m, idx) => `
+                  <button class="map-floor-btn ${idx === 0 ? 'active' : ''}" data-map-index="${idx}">${m.name}</button>
+                `).join('') : ''}
+              </div>
+              <button id="btn-close-map" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer;">✕</button>
+            </div>
+          </div>
+
+          <div class="map-image-wrapper glass-card" style="padding: 0.5rem; text-align: center; background: rgba(7, 9, 14, 0.95); border: 1px solid rgba(245, 158, 11, 0.4);">
+            <img id="map-display-img" src="${maps && maps[0] ? maps[0].url : ''}" alt="${name} Map" style="max-width: 100%; max-height: 550px; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); object-fit: contain;" />
+            <div id="map-caption" style="font-size: 0.8rem; color: #f59e0b; margin-top: 0.5rem; font-weight: 700;">
+              ${maps && maps[0] ? maps[0].name : ''}
+            </div>
           </div>
         </div>
 
@@ -214,6 +243,41 @@ window.DungeonView = class DungeonView {
 
     html += `</div>`;
     this.container.innerHTML = html;
+
+    // Attach Map Viewer Listeners
+    const btnMap = this.container.querySelector('#btn-toggle-map');
+    const mapContainer = this.container.querySelector('#map-preview-container');
+    const btnCloseMap = this.container.querySelector('#btn-close-map');
+    const mapDisplayImg = this.container.querySelector('#map-display-img');
+    const mapCaption = this.container.querySelector('#map-caption');
+    const floorBtns = this.container.querySelectorAll('.map-floor-btn');
+
+    if (btnMap && mapContainer) {
+      btnMap.addEventListener('click', () => {
+        const isHidden = mapContainer.style.display === 'none';
+        mapContainer.style.display = isHidden ? 'block' : 'none';
+      });
+    }
+
+    if (btnCloseMap && mapContainer) {
+      btnCloseMap.addEventListener('click', () => {
+        mapContainer.style.display = 'none';
+      });
+    }
+
+    if (floorBtns && maps) {
+      floorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-map-index'), 10);
+          floorBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          if (maps[idx]) {
+            mapDisplayImg.src = maps[idx].url;
+            mapCaption.textContent = maps[idx].name;
+          }
+        });
+      });
+    }
 
     // Attach YouTube Video Preview Toggle Listeners
     const btnVideo = this.container.querySelector('#btn-toggle-video');

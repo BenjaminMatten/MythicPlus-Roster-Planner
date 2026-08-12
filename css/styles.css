@@ -248,6 +248,59 @@ h1, h2, h3, h4 {
   color: #ffffff;
 }
 
+/* Dungeon Map Guide Button */
+.map-guide-btn {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.25));
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  height: 48px;
+}
+
+.map-guide-btn:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.45), rgba(217, 119, 6, 0.45));
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.4);
+}
+
+/* Map Parchment Preview Modal Box & Floor Selector */
+.map-preview-box {
+  background: rgba(7, 9, 14, 0.95);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.map-floor-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.map-floor-btn.active, .map-floor-btn:hover {
+  background: rgba(245, 158, 11, 0.25);
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
 /* Animated Video Thumbnail Preview Card */
 .video-thumbnail-card {
   text-decoration: none;

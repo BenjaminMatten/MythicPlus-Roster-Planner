@@ -830,7 +830,13 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs",
     "youtubeId": "cgM-EioPF0g",
     "videoUrl": "https://youtu.be/cgM-EioPF0g",
-    "bgImage": "images/altar-of-fangs.jpg"
+    "bgImage": "images/altar-of-fangs.jpg",
+    "maps": [
+      {
+        "name": "Altar of Fangs Overview",
+        "url": "images/altar-of-fangs.jpg"
+      }
+    ]
   },
   {
     "id": "murder-row",
@@ -1934,7 +1940,13 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/murder-row",
     "youtubeId": "jE7g21vi290",
     "videoUrl": "https://youtu.be/jE7g21vi290",
-    "bgImage": "images/murder-row.png"
+    "bgImage": "images/murder-row.png",
+    "maps": [
+      {
+        "name": "Murder Row Overview",
+        "url": "images/murder-row.png"
+      }
+    ]
   },
   {
     "id": "den-of-nalorakk",
@@ -2826,7 +2838,21 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk",
     "youtubeId": "gNJ-3-6k75A",
     "videoUrl": "https://youtu.be/gNJ-3-6k75A",
-    "bgImage": "images/den-of-nalorakk.png"
+    "bgImage": "images/den-of-nalorakk.png",
+    "maps": [
+      {
+        "name": "Heart of Rage (Floor 1)",
+        "url": "images/maps/den-of-nalorakk-map-1.jpg"
+      },
+      {
+        "name": "The Foraging & Winter (Floor 2)",
+        "url": "images/maps/den-of-nalorakk-map-2.jpg"
+      },
+      {
+        "name": "Dreamer's Passage (Floor 3)",
+        "url": "images/maps/den-of-nalorakk-map-3.jpg"
+      }
+    ]
   },
   {
     "id": "the-blinding-vale",
@@ -3726,7 +3752,13 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale",
     "youtubeId": "HcvkIzRTdtY",
     "videoUrl": "https://youtu.be/HcvkIzRTdtY",
-    "bgImage": "images/the-blinding-vale.png"
+    "bgImage": "images/the-blinding-vale.png",
+    "maps": [
+      {
+        "name": "The Blinding Vale Layout",
+        "url": "images/maps/the-blinding-vale-map.jpg"
+      }
+    ]
   },
   {
     "id": "voidscar-arena",
@@ -4818,7 +4850,13 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena",
     "youtubeId": "Da9hWBW_6JE",
     "videoUrl": "https://youtu.be/Da9hWBW_6JE",
-    "bgImage": "images/voidscar-arena.png"
+    "bgImage": "images/voidscar-arena.png",
+    "maps": [
+      {
+        "name": "Voidscar Arena Overview",
+        "url": "images/voidscar-arena.png"
+      }
+    ]
   },
   {
     "id": "kings-rest",
@@ -6130,7 +6168,13 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest",
     "youtubeId": "pT8A8RW9QTc",
     "videoUrl": "https://youtu.be/pT8A8RW9QTc",
-    "bgImage": "images/kings-rest.jpg"
+    "bgImage": "images/kings-rest.jpg",
+    "maps": [
+      {
+        "name": "Kings' Rest Main Layout",
+        "url": "images/maps/kings-rest-map.jpg"
+      }
+    ]
   },
   {
     "id": "ruby-life-pools",
@@ -7082,6 +7126,12 @@ window.SEASON_2_DUNGEONS = [
     "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools",
     "youtubeId": "u-TVxNPFMZs",
     "videoUrl": "https://youtu.be/u-TVxNPFMZs",
-    "bgImage": "images/ruby-life-pools.png"
+    "bgImage": "images/ruby-life-pools.png",
+    "maps": [
+      {
+        "name": "Ruby Life Pools Overview",
+        "url": "https://wow.zamimg.com/uploads/screenshots/normal/1041926-ruby-life-pools-map.jpg"
+      }
+    ]
   }
 ];
