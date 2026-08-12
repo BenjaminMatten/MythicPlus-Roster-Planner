@@ -57,7 +57,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death it explodes, leaving behind multiple puddles of poisoned blood for 30s",
             "strategy": "On death it explodes, leaving behind multiple puddles of poisoned blood for 30s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "twinfang-harrower",
@@ -108,7 +109,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Frontal that starts on the tank and rotates 180 degrees in a random direction",
             "strategy": "Frontal that starts on the tank and rotates 180 degrees in a random direction"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ravenous-descendant",
@@ -131,7 +133,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee attacks grant a stacking 20% attack speed buff for 2s, capped at 20",
             "strategy": "Melee attacks grant a stacking 20% attack speed buff for 2s, capped at 20"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "primal-serpent",
@@ -168,7 +171,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE physical hit that reduces haste by 30% for 6s",
             "strategy": "AoE physical hit that reduces haste by 30% for 6s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ritual-chieftain",
@@ -219,7 +223,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE phys hit that applies a healing absorb",
             "strategy": "AoE phys hit that applies a healing absorb"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "high-evolutionist",
@@ -256,7 +261,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "6s channel that heals for 5% health per tick, if successful gains a shield, CC immunity, and empowers Envenom until broken",
             "strategy": "6s channel that heals for 5% health per tick, if successful gains a shield, CC immunity, and empowers Envenom until broken"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "rattling-writhe",
@@ -293,7 +299,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channeled AoE phys hits, ticks every 1s for 5s",
             "strategy": "Channeled AoE phys hits, ticks every 1s for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "bloodletter",
@@ -316,7 +323,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee attacks spawn puddles of blood",
             "strategy": "Melee attacks spawn puddles of blood"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "hatchling",
@@ -353,7 +361,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Fixates a random player until death",
             "strategy": "Fixates a random player until death"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "blade-of-the-altar",
@@ -376,7 +385,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target teleport and nature hit that applies a 6s DoT, instant cast",
             "strategy": "Random target teleport and nature hit that applies a 6s DoT, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ascendant-serpent",
@@ -427,7 +437,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted channeled frontal that deals nature damage and pushes back, ticks every 1s for 5s",
             "strategy": "Tank targeted channeled frontal that deals nature damage and pushes back, ticks every 1s for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ulateks-chosen",
@@ -464,7 +475,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channeled AoE nature hits that shoot out lines every 3s, ticks every 1s for 9s",
             "strategy": "Channeled AoE nature hits that shoot out lines every 3s, ticks every 1s for 9s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "living-venom",
@@ -487,7 +499,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death it explodes for an AoE nature hit",
             "strategy": "On death it explodes for an AoE nature hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ravi",
@@ -594,7 +607,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "If a bone pile has Fresh Meat the boss gains a larger shield and applies the 9s DoT every 1.5s",
             "strategy": "If a bone pile has Fresh Meat the boss gains a larger shield and applies the 9s DoT every 1.5s"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "the-writhing-coil",
@@ -715,7 +729,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "After 15s the writhes burrow to the centre of the arena and recoil, dealing nature damage and knocking back anyone hit",
             "strategy": "After 15s the writhes burrow to the centre of the arena and recoil, dealing nature damage and knocking back anyone hit"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "zuljan",
@@ -808,7 +823,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target line attack that deals physical damage and applies a 7s phys DoT to anyone hit",
             "strategy": "Random target line attack that deals physical damage and applies a 7s phys DoT to anyone hit"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/altar-of-fangs",
@@ -854,7 +870,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and phys hit that applies an 8s Bleed, instant cast",
             "strategy": "Random target leap and phys hit that applies an 8s Bleed, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "felonious-mage",
@@ -891,7 +908,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target fire channel, ticks every 1s for 5s",
             "strategy": "Random target fire channel, ticks every 1s for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "felwyrm",
@@ -914,7 +932,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death does a 4yd AoE fire hit",
             "strategy": "On death does a 4yd AoE fire hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "bribed-guard",
@@ -951,7 +970,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit and 20% phys damage taken increase for 20s",
             "strategy": "Tank targeted phys hit and 20% phys damage taken increase for 20s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "bribed-captain",
@@ -1002,7 +1022,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit and 20% phys damage taken increase for 20s",
             "strategy": "Tank targeted phys hit and 20% phys damage taken increase for 20s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "street-sneak",
@@ -1025,7 +1046,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Buffs their melee attacks for 8s, causing them to apply a stacking Poison DoT and 5% health reduction for 8s",
             "strategy": "Buffs their melee attacks for 8s, causing them to apply a stacking Poison DoT and 5% health reduction for 8s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "seductive-sayaad",
@@ -1048,7 +1070,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target channel that applies a Magic disorient for 6s",
             "strategy": "Random target channel that applies a Magic disorient for 6s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "massive-felwyrm",
@@ -1099,7 +1122,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons 3 Felwyrms",
             "strategy": "Summons 3 Felwyrms"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "warehouse-worker",
@@ -1122,7 +1146,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target phys hit and 3s Bleed",
             "strategy": "Random target phys hit and 3s Bleed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "keen-taskmaster",
@@ -1145,7 +1170,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrages nearby Warehouse Workers, increasing attack speed by 200% for 20s",
             "strategy": "Enrages nearby Warehouse Workers, increasing attack speed by 200% for 20s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "shivan-punisher",
@@ -1196,7 +1222,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Gained at 50% health, causing pulsing fire damage every 1s and increasing haste by 20% until death",
             "strategy": "Gained at 50% health, causing pulsing fire damage every 1s and increasing haste by 20% until death"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "unleashed-imp",
@@ -1219,7 +1246,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target fire hit",
             "strategy": "Random target fire hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "wrathguard-flayer",
@@ -1256,7 +1284,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target charge and phys hit that applies a 3s Bleed, instant cast",
             "strategy": "Random target charge and phys hit that applies a 3s Bleed, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "fel-invoker",
@@ -1293,7 +1322,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE fire hit under 2 random players",
             "strategy": "AoE fire hit under 2 random players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "demon-fly",
@@ -1316,7 +1346,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target charge and fire hit",
             "strategy": "Random target charge and fire hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "trained-felhunter",
@@ -1339,7 +1370,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee attacks deal bonus shadow damage",
             "strategy": "Melee attacks deal bonus shadow damage"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "corrupted-warlock",
@@ -1390,7 +1422,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Sacrifices 10% health to gain an absorb shield for 35% of health, cast at 50% health",
             "strategy": "Sacrifices 10% health to gain an absorb shield for 35% of health, cast at 50% health"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "doomguard",
@@ -1413,7 +1446,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target shadow hit that deals bonus damage if below 20% health",
             "strategy": "Random target shadow hit that deals bonus damage if below 20% health"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "felmaster-lucsei",
@@ -1450,7 +1484,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted frontal line channel",
             "strategy": "Tank targeted frontal line channel"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "defiled-golem",
@@ -1487,7 +1522,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Shoots out beams towards all players, creating puddles along their path",
             "strategy": "Shoots out beams towards all players, creating puddles along their path"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "kystia-manaheart",
@@ -1608,7 +1644,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Nibbles destabilizes Kystia, stunning her and increasing her damage taken by 115% for 20s while she pulses for AoE chaos damage each second",
             "strategy": "Nibbles destabilizes Kystia, stunning her and increasing her damage taken by 115% for 20s while she pulses for AoE chaos damage each second"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "zaen-bladesorrow",
@@ -1701,7 +1738,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Line attack at all 5 players that deals phys dam and applies a 15s Bleed unless it contacts a Freight",
             "strategy": "Line attack at all 5 players that deals phys dam and applies a 15s Bleed unless it contacts a Freight"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "xathuux-the-annihilator",
@@ -1766,7 +1804,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE chaos hit that buffs attack speed by 75%, damage taken by 30% and spawns 14yd puddles underneath the boss every 1s for 15s which remain for 120s",
             "strategy": "AoE chaos hit that buffs attack speed by 75%, damage taken by 30% and spawns 14yd puddles underneath the boss every 1s for 15s which remain for 120s"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "lithiel-cinderfury",
@@ -1887,7 +1926,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Shockwave that deals fire damage and applies a 50% fire damage taken increase for 1min while granting demons hit 100% haste. Can use the Demonic Gateway to get over it",
             "strategy": "Shockwave that deals fire damage and applies a 50% fire damage taken increase for 1min while granting demons hit 100% haste. Can use the Demonic Gateway to get over it"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/murder-row",
@@ -1947,7 +1987,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and phys hit that applies a 10s Bleed, instant cast",
             "strategy": "Random target leap and phys hit that applies a 10s Bleed, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "thornclaw-gatherer",
@@ -1984,7 +2025,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target puddle, instant cast",
             "strategy": "Random target puddle, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "earthwhisper-tender",
@@ -2021,7 +2063,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE Magic buff that heals mobs for 5% health every 2s for 6s",
             "strategy": "AoE Magic buff that heals mobs for 5% health every 2s for 6s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "territorial-matriarch",
@@ -2044,7 +2087,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrages when a cub dies, increasing damage and speed by 50% for 1min",
             "strategy": "Enrages when a cub dies, increasing damage and speed by 50% for 1min"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "spirit-of-hunger",
@@ -2081,7 +2125,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE channel that deals shadow damage and heals for 50% of damage done, ticks every 1s for 5s",
             "strategy": "AoE channel that deals shadow damage and heals for 50% of damage done, ticks every 1s for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "frostfang",
@@ -2118,7 +2163,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "60% attack and move speed buff for 10s on being pulled, instant cast",
             "strategy": "60% attack and move speed buff for 10s on being pulled, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "terra-rumbler",
@@ -2141,7 +2187,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Absorb shield that pulses for AoE nature damage every 2s until broken",
             "strategy": "Absorb shield that pulses for AoE nature damage every 2s until broken"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "environment",
@@ -2164,7 +2211,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Winds occasionally hit players not in cover, pushing them back and dealing frost damage every second",
             "strategy": "Winds occasionally hit players not in cover, pushing them back and dealing frost damage every second"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "frigid-mauler",
@@ -2187,7 +2235,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE 50% haste and speed reduction for 15s",
             "strategy": "AoE 50% haste and speed reduction for 15s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "glacial-revenant",
@@ -2224,7 +2273,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death leaves behind a puddle that slows players by 40%",
             "strategy": "On death leaves behind a puddle that slows players by 40%"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "avatar-of-determination",
@@ -2261,7 +2311,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "12yd AoE phys hit that stuns for 4s",
             "strategy": "12yd AoE phys hit that stuns for 4s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "the-winter-squall",
@@ -2284,7 +2335,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "12yd AoE around the mob, dealing frost damage every 2s and preventing players from targeting in or out",
             "strategy": "12yd AoE around the mob, dealing frost damage every 2s and preventing players from targeting in or out"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "stormbound-mystic",
@@ -2321,7 +2373,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target nature hit that arcs to 2 nearby players",
             "strategy": "Random target nature hit that arcs to 2 nearby players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ruthless-totemcaller",
@@ -2344,7 +2397,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons a magma totem nearby that constantly pulses for AoE fire damage every 0.3s",
             "strategy": "Summons a magma totem nearby that constantly pulses for AoE fire damage every 0.3s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "grizzled-warbringer",
@@ -2381,7 +2435,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "4yd AoE nature hit under all players",
             "strategy": "4yd AoE nature hit under all players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "bonded-beasttamer",
@@ -2432,7 +2487,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Repositions closer to their target",
             "strategy": "Repositions closer to their target"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "loyal-saberfang",
@@ -2455,7 +2511,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted stacking 10% armor reduction for 5s",
             "strategy": "Tank targeted stacking 10% armor reduction for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "loa-speaker-nanea",
@@ -2506,7 +2563,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons 3 Volatile Totems that pulse for AoE fire damage every 2.5s",
             "strategy": "Summons 3 Volatile Totems that pulse for AoE fire damage every 2.5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "the-hoardmonger",
@@ -2571,7 +2629,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Spawns several mushrooms that do an AoE hit after 12s unless soaked, which applies a stacking 12s Poison. When empowered spawns more mushrooms",
             "strategy": "Spawns several mushrooms that do an AoE hit after 12s unless soaked, which applies a stacking 12s Poison. When empowered spawns more mushrooms"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "sentinel-of-winter",
@@ -2664,7 +2723,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Covers the arena in a storm that pushes players back and ticks for frost damage every second for 8s. Deals bonus damage if not in the safe area near the boss",
             "strategy": "Covers the arena in a storm that pushes players back and ticks for frost damage every second for 8s. Deals bonus damage if not in the safe area near the boss"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "nalorakk",
@@ -2757,7 +2817,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Zul'jarra goes to the centre of the arena and all Echoes charge at her, triggering Demoralizing Scream if successful. Players can intercept them to take a hit of nature damage",
             "strategy": "Zul'jarra goes to the centre of the arena and all Echoes charge at her, triggering Demoralizing Scream if successful. Players can intercept them to take a hit of nature damage"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/den-of-nalorakk",
@@ -2803,7 +2864,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee atacks apply a stacking 16s Magic DoT and 2% slow",
             "strategy": "Melee atacks apply a stacking 16s Magic DoT and 2% slow"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "lightgorged-lasher",
@@ -2826,7 +2888,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Absorb shield that makes the mob immune to CC and grants allies 50% attack speed and 5% max health every 3s until broken",
             "strategy": "Absorb shield that makes the mob immune to CC and grants allies 50% attack speed and 5% max health every 3s until broken"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "radiant-spellsower",
@@ -2877,7 +2940,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "At 25% health the mob attemps to run towards the nearest dormant lasher until defeated",
             "strategy": "At 25% health the mob attemps to run towards the nearest dormant lasher until defeated"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "underbrush-stalker",
@@ -2900,7 +2964,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target teleport and nature hit that applies a 8s Bleed, instant cast",
             "strategy": "Random target teleport and nature hit that applies a 8s Bleed, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "virid-grovekeeper",
@@ -2937,7 +3002,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE nature hit and knockback",
             "strategy": "AoE nature hit and knockback"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "sporeblight-belcher",
@@ -2974,7 +3040,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Spawns circles under each player every 1.5s for 3s",
             "strategy": "Spawns circles under each player every 1.5s for 3s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "thorny-saptor",
@@ -2997,7 +3064,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and phys hit that applies a 4s DoT, followed by a 3s frontal channel",
             "strategy": "Random target leap and phys hit that applies a 4s DoT, followed by a 3s frontal channel"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "lightfeather-petalwing",
@@ -3020,7 +3088,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE disorient for 3s",
             "strategy": "AoE disorient for 3s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "leafy-grovecrawler",
@@ -3043,7 +3112,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target nature hit",
             "strategy": "Random target nature hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "spineshield-beetle",
@@ -3066,7 +3136,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Absorb shield that deals nature damage to attacks until broken",
             "strategy": "Absorb shield that deals nature damage to attacks until broken"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "overgrown-hydra",
@@ -3103,7 +3174,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "3 nature line attacks shot towards a random player",
             "strategy": "3 nature line attacks shot towards a random player"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "luminous-thornmaw",
@@ -3140,7 +3212,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target frontal channel",
             "strategy": "Random target frontal channel"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "special:-3rd-boss-area",
@@ -3163,7 +3236,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Creatures near Lightwarden Ruia do a 7yd AoE nature hit on death and leave behind a puddle",
             "strategy": "Creatures near Lightwarden Ruia do a 7yd AoE nature hit on death and leave behind a puddle"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "potatoad-matriarch",
@@ -3214,7 +3288,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE nature hit that applies a 9s Poison DoT",
             "strategy": "AoE nature hit that applies a 9s Poison DoT"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "newborn-potadpole",
@@ -3237,7 +3312,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and phys hit that knocks back",
             "strategy": "Random target leap and phys hit that knocks back"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "lightblossom-trinity",
@@ -3358,7 +3434,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "If a Lightblossom received no beam ticks or after Lightbloom Overgrowth completes it turns into a puddle for the rest of the encounter",
             "strategy": "If a Lightblossom received no beam ticks or after Lightbloom Overgrowth completes it turns into a puddle for the rest of the encounter"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "ikuzz-the-light-hunter",
@@ -3437,7 +3514,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Ikuzz goes into a frenzy at 50% health, gaining 20% speed and pulsing for AoE holy damage every 2s until defeated",
             "strategy": "Ikuzz goes into a frenzy at 50% health, gaining 20% speed and pulsing for AoE holy damage every 2s until defeated"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "lightwarden-ruia",
@@ -3544,7 +3622,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channel that starts at 40% health and causes spirits to rotate through Lightfire, Grievous Thrash, Lightfall, and Pulverizing Strikes every 8s until defeated",
             "strategy": "Channel that starts at 40% health and causes spirits to rotate through Lightfire, Grievous Thrash, Lightfall, and Pulverizing Strikes every 8s until defeated"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "ziekket",
@@ -3637,7 +3716,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target frontal channel that destroys any dormant lashers hit, turning them into puddles",
             "strategy": "Random target frontal channel that destroys any dormant lashers hit, turning them into puddles"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/the-blinding-vale",
@@ -3683,7 +3763,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target 3yd nature hit that leaves behind a puddle",
             "strategy": "Random target 3yd nature hit that leaves behind a puddle"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "feral-saberon",
@@ -3706,7 +3787,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target charge and phys hit that applies a 5s Bleed",
             "strategy": "Random target charge and phys hit that applies a 5s Bleed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "enthralled-shaman",
@@ -3743,7 +3825,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons a magma totem nearby that constantly pulses for AoE fire damage every 0.3s",
             "strategy": "Summons a magma totem nearby that constantly pulses for AoE fire damage every 0.3s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "dominated-brawler",
@@ -3780,7 +3863,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "25% damage done reduction for 15s",
             "strategy": "25% damage done reduction for 15s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "brutal-overseer",
@@ -3817,7 +3901,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target charge and phys hit followed by an 8yd whirlwind for 6s which fixates the initial target",
             "strategy": "Random target charge and phys hit followed by an 8yd whirlwind for 6s which fixates the initial target"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "aegyra-the-unyielding",
@@ -3896,7 +3981,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death gives your group 3% versatility",
             "strategy": "On death gives your group 3% versatility"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "longtooth-tuskarr",
@@ -3919,7 +4005,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrage that increases damage done by 50% and reduces damage taken by 20% for 20s",
             "strategy": "Enrage that increases damage done by 50% and reduces damage taken by 20% for 20s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "voidtouched-magi",
@@ -3956,7 +4043,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target 10yd AoE shadow hit that leaves behind a puddle, targets 2 players",
             "strategy": "Random target 10yd AoE shadow hit that leaves behind a puddle, targets 2 players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "rajkess-the-spellstorm",
@@ -4021,7 +4109,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death gives your group 3 mastery points",
             "strategy": "On death gives your group 3 mastery points"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "sycophantic-tarasek",
@@ -4044,7 +4133,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted stacking Magic debuff that reduces armor by 10% for 10s, instant cast",
             "strategy": "Tank targeted stacking Magic debuff that reduces armor by 10% for 10s, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "chitigoth",
@@ -4081,7 +4171,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channeled AoE nature hits, ticks every 2s for 10s",
             "strategy": "Channeled AoE nature hits, ticks every 2s for 10s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "raging-raptor",
@@ -4104,7 +4195,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrages nearby enemies, increasing melee haste by 20%",
             "strategy": "Enrages nearby enemies, increasing melee haste by 20%"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "protective-turtle",
@@ -4127,7 +4219,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "50% damage reduction to all nearby allies for 10s, on completion the mob is stunned and takes 20% additional damage for 15s",
             "strategy": "50% damage reduction to all nearby allies for 10s, on completion the mob is stunned and takes 20% additional damage for 15s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "brutok",
@@ -4178,7 +4271,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted fire hit and knockback",
             "strategy": "Tank targeted fire hit and knockback"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "abducted-drakonid",
@@ -4201,7 +4295,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target 4yd AoE fire hit near 3 players that applies a 10s DoT",
             "strategy": "Random target 4yd AoE fire hit near 3 players that applies a 10s DoT"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "angry-krolusk",
@@ -4224,7 +4319,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE nature hit and 40% slow for 12s",
             "strategy": "AoE nature hit and 40% slow for 12s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "savage-shredclaw",
@@ -4247,7 +4343,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit that increases damage taken by 20% for 10s, instant cast",
             "strategy": "Tank targeted phys hit that increases damage taken by 20% for 10s, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "killvore-screamer",
@@ -4270,7 +4367,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE 6s Fear",
             "strategy": "AoE 6s Fear"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "watchful-harrower",
@@ -4307,7 +4405,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target channeled 8yd AoE hits, ticks every 0.5s for 4s",
             "strategy": "Random target channeled 8yd AoE hits, ticks every 0.5s for 4s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "agitated-voidscythe",
@@ -4344,7 +4443,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit that applies an 8s Bleed",
             "strategy": "Tank targeted phys hit that applies an 8s Bleed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "blistercreep",
@@ -4367,7 +4467,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death explodes, creating three 4yd AoE fire hits",
             "strategy": "On death explodes, creating three 4yd AoE fire hits"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "voidminder",
@@ -4404,7 +4505,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channeled 3% health heal every 2s for 20s",
             "strategy": "Channeled 3% health heal every 2s for 20s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "devouring-brutalizer",
@@ -4455,7 +4557,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Devours a low health mob, healing for 50% health and gaining a 20% damage increase for 30s unless it is killed",
             "strategy": "Devours a low health mob, healing for 50% health and gaining a 20% damage increase for 30s unless it is killed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "scavenging-siphoid",
@@ -4478,7 +4581,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee attacks deal bonus shadow damage",
             "strategy": "Melee attacks deal bonus shadow damage"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "tazrah",
@@ -4543,7 +4647,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE shadow hit that causes orbs to erupt from existing puddles",
             "strategy": "AoE shadow hit that causes orbs to erupt from existing puddles"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "atroxus",
@@ -4622,7 +4727,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melees apply a stacking 50% nature damage taken increase for 5mins",
             "strategy": "Melees apply a stacking 50% nature damage taken increase for 5mins"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "charonus",
@@ -4701,7 +4807,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target channel that fires out 6 orbs in a line that deal shadow damage and knockback the first player hit",
             "strategy": "Random target channel that fires out 6 orbs in a line that deal shadow damage and knockback the first player hit"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/voidscar-arena",
@@ -4776,7 +4883,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "75% attack speed increase, gained at 50% health",
             "strategy": "75% attack speed increase, gained at 50% health"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "minion-of-zul",
@@ -4813,7 +4921,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Fixate random players for 10s, doing a 5yd AoE Magic fear for 12s if they reach melee which also destroys the minion",
             "strategy": "Fixate random players for 10s, doing a 5yd AoE Magic fear for 12s if they reach melee which also destroys the minion"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "umbral-warrior",
@@ -4836,7 +4945,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted shadow hit, instant cast",
             "strategy": "Tank targeted shadow hit, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "risen-hexer",
@@ -4873,7 +4983,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE shadow hit that applies a 12s Curse",
             "strategy": "AoE shadow hit that applies a 12s Curse"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "shadow-borne-champion",
@@ -4924,7 +5035,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrage that increases damage done by 150% for 10s",
             "strategy": "Enrage that increases damage done by 150% for 10s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "king-rahuai",
@@ -4961,7 +5073,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channeled AoE nature hits around the mob, ticks every 0.3s for 4s",
             "strategy": "Channeled AoE nature hits around the mob, ticks every 0.3s for 4s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "guard-captain-atu",
@@ -4984,7 +5097,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Magic buff applied to allies, reducing their damage taken by 30% for 18s",
             "strategy": "Magic buff applied to allies, reducing their damage taken by 30% for 18s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "seneschal-mbara",
@@ -5007,7 +5121,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Magic buff that heals for 7% health every 2s for 10s",
             "strategy": "Magic buff that heals for 7% health every 2s for 10s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "king-timaji",
@@ -5058,7 +5173,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target fixate while channeling AoE phys hits, ticks every 0.5s for 6s",
             "strategy": "Random target fixate while channeling AoE phys hits, ticks every 0.5s for 6s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "queen-wasi",
@@ -5109,7 +5225,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target Magic charm for 10s",
             "strategy": "Random target Magic charm for 10s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "queen-patlaa",
@@ -5174,7 +5291,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Enrage that increases movement and attack speed of all nearby enemies by 25% for 15s",
             "strategy": "Enrage that increases movement and attack speed of all nearby enemies by 25% for 15s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "skeletal-hunting-raptor",
@@ -5197,7 +5315,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and frontal channel",
             "strategy": "Random target leap and frontal channel"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "king-aakul",
@@ -5234,7 +5353,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE phys hit on any bleeding players that heals for X% of damage done",
             "strategy": "AoE phys hit on any bleeding players that heals for X% of damage done"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "bloodsworn-assassin",
@@ -5257,7 +5377,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target teleport that applies an 18s Bleed and 10% slow, instant cast",
             "strategy": "Random target teleport that applies an 18s Bleed and 10% slow, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "purification-construct",
@@ -5294,7 +5415,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE fire hit that creates a puddle in front of the mob",
             "strategy": "AoE fire hit that creates a puddle in front of the mob"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "embalming-fluid",
@@ -5317,7 +5439,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death shoots 4yd circles at all players that apply a 12s Poison and 20% slow to anyone hit",
             "strategy": "On death shoots 4yd circles at all players that apply a 12s Poison and 20% slow to anyone hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "interment-construct",
@@ -5368,7 +5491,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE shadow channel until the entombed player is freed, ticks every 2s for 30s",
             "strategy": "AoE shadow channel until the entombed player is freed, ticks every 2s for 30s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "half-finished-mummy",
@@ -5391,7 +5515,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE 12s Disease",
             "strategy": "AoE 12s Disease"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "spectral-shaman",
@@ -5428,7 +5553,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons a totem that heals all nearby allies for 10% health every 2.5s for 30s or until killed",
             "strategy": "Summons a totem that heals all nearby allies for 10% health every 2.5s for 30s or until killed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "phantom-hex-priest",
@@ -5465,7 +5591,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target Curse that hexes the player for 5s",
             "strategy": "Random target Curse that hexes the player for 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "royal-berserker",
@@ -5502,7 +5629,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and AoE phys hit that knocks back",
             "strategy": "Random target leap and AoE phys hit that knocks back"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ghostly-brute",
@@ -5539,7 +5667,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "18yd AoE phys hit that knocks up anyone hit high into the air",
             "strategy": "18yd AoE phys hit that knocks up anyone hit high into the air"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "honored-raptor",
@@ -5562,7 +5691,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target leap and frontal channel",
             "strategy": "Random target leap and frontal channel"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "shadow-of-zul",
@@ -5613,7 +5743,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target 18yd AoE shadow hit that spawns a minon of zul, targets 2 players",
             "strategy": "Random target 18yd AoE shadow hit that spawns a minon of zul, targets 2 players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "the-golden-serpent",
@@ -5678,7 +5809,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Animates Molten Gold puddles into Animated Gold, which move towards the boss and give a shield and 25% damage amp if they reach her",
             "strategy": "Animates Molten Gold puddles into Animated Gold, which move towards the boss and give a shield and 25% damage amp if they reach her"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "mchimba-the-embalmer",
@@ -5757,7 +5889,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE 12s Disease, cast by Mummies",
             "strategy": "AoE 12s Disease, cast by Mummies"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "the-council-of-tribes",
@@ -5864,7 +5997,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons an Explosive Totem that does a lethal AoE hit after 9s, Thundering Totem that interrupts spellcasting, and Torrent Totem that makes 3yd AoEs to avoid",
             "strategy": "Summons an Explosive Totem that does a lethal AoE hit after 9s, Thundering Totem that interrupts spellcasting, and Torrent Totem that makes 3yd AoEs to avoid"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "dazar,-the-first-king",
@@ -5985,7 +6119,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit and 10s Bleed that reduces armor by 10%",
             "strategy": "Tank targeted phys hit and 10s Bleed that reduces armor by 10%"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/kings-rest",
@@ -6045,7 +6180,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE nature hit and 8s DoT that spawns 6yd circles under 2 random players",
             "strategy": "AoE nature hit and 8s DoT that spawns 6yd circles under 2 random players"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "deepstone-earthshaper",
@@ -6068,7 +6204,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys hit that applies a stacking 30% damage taken increase for 8s, instant cast with a ~16s ICD",
             "strategy": "Tank targeted phys hit that applies a stacking 30% damage taken increase for 8s, instant cast with a ~16s ICD"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "earthbound-guardian",
@@ -6091,7 +6228,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target nature hit and 8s DoT, instant cast",
             "strategy": "Random target nature hit and 8s DoT, instant cast"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "flashfrost-chillweaver",
@@ -6128,7 +6266,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Channels an absorb shield onto a random ally that increases by 5% health per tick and makes them CC immune for 15s or until destroyed",
             "strategy": "Channels an absorb shield onto a random ally that increases by 5% health per tick and makes them CC immune for 15s or until destroyed"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "infused-whelp",
@@ -6151,7 +6290,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Melee attacks apply a stacking 2% Magic slow which freezes the player at 20 stacks",
             "strategy": "Melee attacks apply a stacking 2% Magic slow which freezes the player at 20 stacks"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "defier-draghar",
@@ -6188,7 +6328,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted line attack and charge that deals fire damage and applies a 10s Bleed to anyone hit",
             "strategy": "Tank targeted line attack and charge that deals fire damage and applies a 10s Bleed to anyone hit"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "scorchling",
@@ -6211,7 +6352,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death leaves behind a puddle",
             "strategy": "On death leaves behind a puddle"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "primalist-cinderweaver",
@@ -6248,7 +6390,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Random target 6s DoT that does a 6yd AoE hit and knockup on expiration",
             "strategy": "Random target 6s DoT that does a 6yd AoE hit and knockup on expiration"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ashseer-flamelasher",
@@ -6285,7 +6428,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death gains a Magic absorb shield that gives CC immunity, does a 5yd AoE hit, and spawns circles to avoid for 15s",
             "strategy": "On death gains a Magic absorb shield that gives CC immunity, does a 5yd AoE hit, and spawns circles to avoid for 15s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "blazebound-destroyer",
@@ -6350,7 +6494,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death does a 20yd explosion after 5s",
             "strategy": "On death does a 20yd explosion after 5s"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "ruinous-stormbringer",
@@ -6401,7 +6546,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "20yd AoE nature hit and knockback, instant cast at 100 energy",
             "strategy": "20yd AoE nature hit and knockback, instant cast at 100 energy"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "flamegullet",
@@ -6452,7 +6598,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys/fire hit and 6s DoT",
             "strategy": "Tank targeted phys/fire hit and 6s DoT"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "thunderhead",
@@ -6503,7 +6650,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys/nature hit and knockback",
             "strategy": "Tank targeted phys/nature hit and knockback"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "primal-thundercloud",
@@ -6540,7 +6688,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Charges at the furthest player and does a 3yd AoE hit around them that destroys the mob, cast when Stormcloud Barrier is depleted",
             "strategy": "Charges at the furthest player and does a 3yd AoE hit around them that destroys the mob, cast when Stormcloud Barrier is depleted"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "storm-warrior",
@@ -6563,7 +6712,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE nature hit, instant cast with a ~16s ICD",
             "strategy": "AoE nature hit, instant cast with a ~16s ICD"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "tempest-channeler",
@@ -6614,7 +6764,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons 2 Primal Thunderclouds",
             "strategy": "Summons 2 Primal Thunderclouds"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "high-channeler-ryvati",
@@ -6665,7 +6816,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Summons 4 Primal Thunderclouds",
             "strategy": "Summons 4 Primal Thunderclouds"
           }
-        ]
+        ],
+        "baseHp": 9500000
       },
       {
         "id": "melidrussa-chillworn",
@@ -6744,7 +6896,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "AoE frost hits every 1.5s until 10% health absorb is destroyed, each tick increases damage taken by 5%",
             "strategy": "AoE frost hits every 1.5s until 10% health absorb is destroyed, each tick increases damage taken by 5%"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "kokia-blazehoof",
@@ -6837,7 +6990,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "On death the Blazebound Firestorm does a 20yd AoE hit that leaves behind a puddle",
             "strategy": "On death the Blazebound Firestorm does a 20yd AoE hit that leaves behind a puddle"
           }
-        ]
+        ],
+        "baseHp": 52000000
       },
       {
         "id": "kyrakka-and-erkhart-stormvein",
@@ -6916,7 +7070,8 @@ window.SEASON_2_DUNGEONS = [
             "description": "Tank targeted phys/nature hit that applies a Magic debuff that increases nature damage taken by 100% for 30s",
             "strategy": "Tank targeted phys/nature hit that applies a Magic debuff that increases nature damage taken by 100% for 30s"
           }
-        ]
+        ],
+        "baseHp": 52000000
       }
     ],
     "methodUrl": "https://www.method.gg/guides/dungeons/ruby-life-pools",

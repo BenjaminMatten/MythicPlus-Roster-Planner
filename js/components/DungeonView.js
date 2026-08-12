@@ -1,7 +1,7 @@
 /**
  * Dungeon Mob & Ability Explorer Component
- * Renders top description banner with dungeon background graphic overlay, Method.gg guide link,
- * animated video thumbnail preview card, and mathematically centered pulse ring.
+ * Renders left-adjusted Method.gg guide link, animated video thumbnail preview card,
+ * and dynamically calculates mob & boss health scaled by the selected Mythic+ Key Level (+2 to +15+).
  */
 
 window.DungeonView = class DungeonView {
@@ -10,6 +10,8 @@ window.DungeonView = class DungeonView {
     this.activeFilter = 'all';
     this.searchQuery = '';
     this.currentDungeon = null;
+    this.keyLevel = 8;
+    this.affix = 'none';
   }
 
   setDungeon(dungeon) {
@@ -25,6 +27,50 @@ window.DungeonView = class DungeonView {
   setSearchQuery(query) {
     this.searchQuery = query.toLowerCase().trim();
     this.render();
+  }
+
+  setKeyLevel(keyLevelOption) {
+    if (typeof keyLevelOption === 'string') {
+      if (keyLevelOption.includes('tyrannical')) {
+        this.keyLevel = 10;
+        this.affix = 'tyrannical';
+      } else if (keyLevelOption.includes('fortified')) {
+        this.keyLevel = 10;
+        this.affix = 'fortified';
+      } else {
+        this.keyLevel = parseInt(keyLevelOption, 10) || 8;
+        this.affix = 'none';
+      }
+    } else {
+      this.keyLevel = keyLevelOption || 8;
+      this.affix = 'none';
+    }
+    this.render();
+  }
+
+  calculateMobHp(mob) {
+    const baseHp = mob.baseHp || (mob.type === 'Boss' ? 52000000 : 12000000);
+    const isBoss = mob.type === 'Boss';
+    
+    // Mythic+ Key Level scaling formula: (1.085)^(keyLevel - 2)
+    let scale = Math.pow(1.085, this.keyLevel - 2);
+    
+    if (isBoss && this.affix === 'tyrannical') {
+      scale *= 1.30;
+    } else if (!isBoss && this.affix === 'fortified') {
+      scale *= 1.20;
+    }
+
+    const finalHp = Math.round(baseHp * scale);
+    
+    if (finalHp >= 1_000_000_000) {
+      return `${(finalHp / 1_000_000_000).toFixed(2)}B`;
+    } else if (finalHp >= 1_000_000) {
+      return `${(finalHp / 1_000_000).toFixed(1)}M`;
+    } else if (finalHp >= 1_000) {
+      return `${(finalHp / 1_000).toFixed(0)}k`;
+    }
+    return `${finalHp}`;
   }
 
   render() {
@@ -140,6 +186,8 @@ window.DungeonView = class DungeonView {
     } else {
       filteredMobs.forEach(mob => {
         const typeClass = mob.type === 'Boss' ? 'mob-type-boss' : 'mob-type-trash';
+        const scaledHpStr = this.calculateMobHp(mob);
+
         html += `
           <div class="mob-group-card glass-card">
             <div class="mob-header">
@@ -148,6 +196,9 @@ window.DungeonView = class DungeonView {
                 <div class="mob-name">
                   ${mob.name}
                   <span class="mob-type-tag ${typeClass}">${mob.type}</span>
+                  <span class="mob-hp-badge" title="Scaled Health at +${this.keyLevel} Keystone level">
+                    ❤️ ${scaledHpStr} HP
+                  </span>
                 </div>
                 <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.1rem;">${mob.role}</div>
               </div>

@@ -84,6 +84,15 @@ window.App = class App {
   }
 
   setupEventListeners() {
+    // Key level selector listener
+    const keySelect = document.getElementById('key-level-select');
+    if (keySelect) {
+      this.dungeonView.setKeyLevel(keySelect.value);
+      keySelect.addEventListener('change', (e) => {
+        this.dungeonView.setKeyLevel(e.target.value);
+      });
+    }
+
     // Search input
     const searchInput = document.getElementById('search-input');
     if (searchInput) {

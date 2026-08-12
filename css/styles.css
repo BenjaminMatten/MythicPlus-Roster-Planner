@@ -458,6 +458,22 @@ h1, h2, h3, h4 {
   pointer-events: none;
 }
 
+/* Scaled Mob Health Badge */
+.mob-hp-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: rgba(239, 68, 68, 0.18);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+  margin-left: 0.4rem;
+}
+
 /* Main Split View Layout */
 .main-view-layout {
   display: grid;
@@ -586,6 +602,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .mob-type-tag {
